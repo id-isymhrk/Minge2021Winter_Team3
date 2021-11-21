@@ -69,5 +69,25 @@ git push origin ブランチ名
 
 ※なにかを更新したとき前提
 
-`git add` して `git commit` して `git push origin ブランチ名`
+1. push すると以下のような緑色の表示が出てくる
+
+
+
+![create_PR1.png](./docs/image/create_PR1.png)
+
+
+2. Compare & pull request を押す
+
+タイトルをいい感じに日本語に直す
+
+例.
+
+- `README.md の修正`
+
+
+下の入力欄に変更内容などを入力する  
+出来たら `Create pull request` を押す
+
+![create_PR2.png](./docs/image/create_PR2.png)
+
 
