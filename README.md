@@ -50,6 +50,15 @@ git branch 'feature/#1/update-readme'
 git checkout 'feature/#1/update-readme'
 ```
 
+### `git commit` をするとき
+とくに指定はないけど、コミットメッセージに issue 番号を付けるとうれしい（なくてもいい）
+
+例.
+
+```bash
+git commit -m "Update README.md, #1"
+```
+
 
 ### `git push` をするとき
 `git add` して `git commit` したあと。
