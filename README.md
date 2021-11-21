@@ -91,3 +91,14 @@ git push origin ブランチ名
 ![create_PR2.png](./docs/image/create_PR2.png)
 
 
+3. 作られているか確認する
+
+Reviewersに誰かを指定してもいい。
+
+他の人にレビューをしてもらったり、OKをもらったら `main` ブランチにマージする。
+
+![create_PR3.png](./docs/image/create_PR3.png)
+
+
+4. `Merge pull request` を押す
+おつかれさまでした！
