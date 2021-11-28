@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VirusBuster", "VirusBuster.vcxproj", "{8B4305B9-250D-4C64-90F1-3ED8B92A9D8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B4305B9-250D-4C64-90F1-3ED8B92A9D8C}.Debug|x64.ActiveCfg = Debug|x64
+		{8B4305B9-250D-4C64-90F1-3ED8B92A9D8C}.Debug|x64.Build.0 = Debug|x64
+		{8B4305B9-250D-4C64-90F1-3ED8B92A9D8C}.Release|x64.ActiveCfg = Release|x64
+		{8B4305B9-250D-4C64-90F1-3ED8B92A9D8C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D055B226-1A45-4499-B6D4-B84CE5E40D90}
+	EndGlobalSection
+EndGlobal
