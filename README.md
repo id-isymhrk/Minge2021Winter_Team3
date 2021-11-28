@@ -4,7 +4,7 @@
 
 ## GitHub の使い方
 
-### Issue を作るとき
+<details><summary>Issueを作るとき</summary>
 
 1. New issue ボタンを押す
 
@@ -28,9 +28,11 @@
 次のように作られていればOK
 
 ![create_issue3.png](./docs/image/create_issue3.png)
+  
+</details>
 
 
-### ブランチの命名規則
+<details><summary>ブランチの命名規則</summary>
 
 - feature の場合
   `feature/#ここにissue番号/issueの内容`
@@ -49,8 +51,12 @@ git branch 'feature/#1/update-readme'
 # 作ったブランチに移動する(シングルクォーテーションは環境によってはいらないかも)
 git checkout 'feature/#1/update-readme'
 ```
+  
+</details>
 
-### `git commit` をするとき
+
+<details><summary>git commit をするとき</summary>
+
 とくに指定はないけど、コミットメッセージに issue 番号を付けるとうれしい（なくてもいい）
 
 例.
@@ -59,8 +65,10 @@ git checkout 'feature/#1/update-readme'
 git commit -m "Update README.md, #1"
 ```
 
+</details>
 
-### `git push` をするとき
+<details><summary>git push をするとき</summary>
+
 `git add` して `git commit` したあと。
 
 自分の作業しているブランチと同じ名前のリモートブランチに`push`する。
@@ -72,9 +80,10 @@ git push origin ブランチ名
 # git push origin feature/#1/update-readme
 ```
 
+</details>
 
+<details><summary>Pull request を作るとき</summary>
 
-### Pull request を作るとき
 
 ※なにかを更新したとき前提
 
@@ -111,3 +120,5 @@ Reviewersに誰かを指定してもいい。
 
 4. `Merge pull request` を押す
 おつかれさまでした！
+  
+</details>
