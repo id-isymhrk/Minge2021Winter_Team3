@@ -1,7 +1,12 @@
-﻿# include <Siv3D.hpp> // OpenSiv3D v0.6.3
+﻿#include"SceneClass.hpp"
 
 void Main()
 {
+
+	App manager;
+	manager
+		.add<Title>(State::Title);
+
 	// 背景の色を設定 | Set background color
 	Scene::SetBackground(ColorF{ 0.8, 0.9, 1.0 });
 
