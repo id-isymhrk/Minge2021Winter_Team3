@@ -314,9 +314,9 @@
     <Xml Include="App\example\xml\test.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Common.hpp" />
+    <ClInclude Include="src\Common.hpp" />
+    <ClInclude Include="src\SceneClass.hpp" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="SceneClass.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App\example\obj\blacksmith.obj">

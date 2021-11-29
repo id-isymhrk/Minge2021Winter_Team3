@@ -779,10 +779,10 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Common.hpp">
+    <ClInclude Include="src\SceneClass.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SceneClass.hpp">
+    <ClInclude Include="src\Common.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
