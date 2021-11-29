@@ -27,7 +27,7 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void Debug();
+	void debug();
 };
 
 class Setting :public App::Scene {
@@ -38,7 +38,7 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void Debug();
+	void debug();
 };
 
 class Stage :public App::Scene {
@@ -49,7 +49,7 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void Debug();
+	void debug();
 };
 
 class Clear :public App::Scene {
@@ -60,7 +60,7 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void Debug();
+	void debug();
 };
 
 class Over :public App::Scene {
@@ -70,5 +70,5 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void Debug();
+	void debug();
 };
