@@ -24,9 +24,50 @@ private:
 
 public:
 	Title(const InitData& init);
-
 	void update() override;
+	void draw() const override;
 
+	void Debug();
+};
+
+class Setting :public App::Scene {
+private:
+
+public:
+	Setting(const InitData& init);
+	void update() override;
+	void draw() const override;
+
+	void Debug();
+};
+
+class Stage :public App::Scene {
+private:
+
+public:
+	Stage(const InitData& init);
+	void update() override;
+	void draw() const override;
+
+	void Debug();
+};
+
+class Clear :public App::Scene {
+private:
+
+public:
+	Clear(const InitData& init);
+	void update() override;
+	void draw() const override;
+
+	void Debug();
+};
+
+class Over :public App::Scene {
+private:
+public:
+	Over(const InitData& init);
+	void update() override;
 	void draw() const override;
 
 	void Debug();
