@@ -40,7 +40,7 @@ void Title::draw() const {
 	Circle{ Cursor::Pos(), 40 }.draw(ColorF{ 1, 0, 0, 0.5 });
 }
 
-void Title::debug() {
+void Title::debug() const {
 
 	//// テキストを画面にデバッグ出力 | Print a text
 	//Print << U"Push [A] key";

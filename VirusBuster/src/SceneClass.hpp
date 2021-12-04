@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "Common.hpp"
+#include "Basic.hpp"
 
 class Title :public App::Scene {
 private:
@@ -27,7 +27,7 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void debug();
+	void debug() const;
 };
 
 class Setting :public App::Scene {
@@ -38,7 +38,7 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void debug();
+	void debug() const;
 };
 
 class Stage :public App::Scene {
@@ -49,7 +49,7 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void debug();
+	void debug() const;
 };
 
 class Clear :public App::Scene {
@@ -60,7 +60,7 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void debug();
+	void debug() const;
 };
 
 class Over :public App::Scene {
@@ -70,5 +70,5 @@ public:
 	void update() override;
 	void draw() const override;
 
-	void debug();
+	void debug() const;
 };
