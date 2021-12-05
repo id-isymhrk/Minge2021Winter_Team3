@@ -6,7 +6,7 @@ Stage::Stage(const InitData& init)
 }
 
 void Stage::update() {
-	//デバッグ用
+	//繝�繝舌ャ繧ｰ逕ｨ
 	debug();
 }
 
@@ -16,5 +16,5 @@ void Stage::draw() const {
 
 void Stage::debug() const {
 	ClearPrint();
-	Print << U"ここは設定画面";
+	Print << U"縺薙％縺ｯ繧ｲ繝ｼ繝譛ｬ邱ｨ";
 }
