@@ -5,7 +5,7 @@ Clear::Clear(const InitData& init):IScene(init) {
 }
 
 void Clear::update() {
-	//デバッグ用
+	//繝�繝舌ャ繧ｰ逕ｨ
 	debug();
 }
 
@@ -15,5 +15,5 @@ void Clear::draw() const {
 
 void Clear::debug() const {
 	ClearPrint();
-	Print << U"ここは設定画面";
+	Print << U"縺薙％縺ｯ繧ｯ繝ｪ繧｢逕ｻ髱｢";
 }
