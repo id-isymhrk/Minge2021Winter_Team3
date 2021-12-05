@@ -5,14 +5,11 @@ void Main()
 
 	App manager;
 	manager
-		.add<Title>(State::Title);
+		.add<Title>(State::Title)
+		.add<Setting>(State::Setting);
 
 	// 背景の色を設定 | Set background color
 	Scene::SetBackground(ColorF{ 0.8, 0.9, 1.0 });
-
-	// 絵文字を描画する座標 | Coordinates of the emoji
-	Vec2 emojiPos{ 300, 150 };
-
 
 	while (System::Update())
 	{
