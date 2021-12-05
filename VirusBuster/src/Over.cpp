@@ -6,7 +6,7 @@ Over::Over(const InitData& init)
 }
 
 void Over::update() {
-	//デバッグ用
+	//繝�繝舌ャ繧ｰ逕ｨ
 	debug();
 }
 
@@ -16,5 +16,5 @@ void Over::draw() const {
 
 void Over::debug() const {
 	ClearPrint();
-	Print << U"ここは設定画面";
+	Print << U"縺薙％縺ｯ繧ｲ繝ｼ繝繧ｪ繝ｼ繝舌�ｼ逕ｻ髱｢";
 }
