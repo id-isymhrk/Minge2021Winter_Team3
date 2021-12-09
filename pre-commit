@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git diff --cached --name-only | grep -E '.+\.(hpp|cpp|h|c)' | while read target; do
+    if [ ! -f $target  ]; then :
+    elif file $target | grep -v -q 'with BOM' ; then
+        nkf --overwrite -d --oc=UTF-8-BOM $target
+        echo "Encoding of $target is changed !!"
+        git add $target
+    fi
+done
