@@ -14,7 +14,7 @@ void Over::draw() const {
 
 }
 
-void Over::debug() const {
+void Over::debug() {
 	ClearPrint();
 	Print << U"ここはゲームオーバー画面";
 }

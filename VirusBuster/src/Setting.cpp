@@ -15,7 +15,7 @@ void Setting::draw() const {
 
 }
 
-void Setting::debug() const {
+void Setting::debug() {
 	ClearPrint();
 	Print << U"‚±‚±‚ÍÝ’è‰æ–Ê";
 

@@ -14,7 +14,7 @@ void Stage::draw() const {
 
 }
 
-void Stage::debug() const {
+void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
 }

@@ -13,7 +13,7 @@ void Clear::draw() const {
 
 }
 
-void Clear::debug() const {
+void Clear::debug() {
 	ClearPrint();
 	Print << U"ここはクリア画面";
 }
