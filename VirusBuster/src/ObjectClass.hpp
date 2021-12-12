@@ -24,9 +24,11 @@ class EnemyTemplate
 {
 private:
 	int HP;
-	int Damage;
+	int damage;
 
 	Texture looks;
+
+	RectF Body;
 
 public:
 	EnemyTemplate();
@@ -41,7 +43,7 @@ class BulletTemplate
 {
 private:
 	double position;
-	int Damage;
+	int damage;
 
 public:
 	BulletTemplate();
