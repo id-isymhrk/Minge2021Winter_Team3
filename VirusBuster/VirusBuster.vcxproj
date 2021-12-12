@@ -319,6 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Basic.hpp" />
+    <ClInclude Include="src\ObjectClass.hpp" />
     <ClInclude Include="src\SceneClass.hpp" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
