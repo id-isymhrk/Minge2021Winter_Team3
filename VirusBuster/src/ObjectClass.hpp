@@ -47,7 +47,7 @@ public:
 	BulletTemplate();
 	~BulletTemplate();
 
-	void draw();
-	void move();
+	virtual void draw();
+	virtual void move();
 	void remove(EnemyTemplate);
 };
