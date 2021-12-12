@@ -25,7 +25,6 @@ private:
 	int HP;
 	int damage;
 
-	Texture looks;
 
 	RectF Body;
 
