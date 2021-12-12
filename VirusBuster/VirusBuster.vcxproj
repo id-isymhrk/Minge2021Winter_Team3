@@ -114,6 +114,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Clear.cpp" />
+    <ClCompile Include="src\EnemyA.cpp" />
+    <ClCompile Include="src\EnemyTemplate.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Over.cpp" />
     <ClCompile Include="src\Stage.cpp" />
@@ -319,6 +321,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Basic.hpp" />
+    <ClInclude Include="src\ObjectClass.hpp" />
     <ClInclude Include="src\SceneClass.hpp" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
