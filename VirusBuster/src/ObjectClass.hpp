@@ -4,7 +4,7 @@
 class Player
 {
 private:
-	const double position;
+	Vec2 position;
 	double angle;
 
 	Texture looks;
