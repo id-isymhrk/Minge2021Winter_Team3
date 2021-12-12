@@ -7,7 +7,6 @@ private:
 	Vec2 position;
 	double angle;
 
-	Texture looks;
 	
 	int BulletType;
 
