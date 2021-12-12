@@ -40,7 +40,7 @@ public:
 class BulletTemplate
 {
 private:
-	double position;
+	RectF Body;
 	int damage;
 
 public:
