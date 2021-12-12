@@ -139,9 +139,6 @@
     <Filter Include="Source Files\SceneClass">
       <UniqueIdentifier>{dd78ada4-a25e-4552-b842-0340d1124c22}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\SceneClass\Enemy">
-      <UniqueIdentifier>{fdbe0f52-fcef-4cdf-a3c8-1177f4dcdf10}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -164,12 +161,6 @@
     </ClCompile>
     <ClCompile Include="src\Stage.cpp">
       <Filter>Source Files\SceneClass</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EnemyA.cpp">
-      <Filter>Source Files\SceneClass\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EnemyTemplate.cpp">
-      <Filter>Source Files\SceneClass\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
