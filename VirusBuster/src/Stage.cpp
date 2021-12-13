@@ -10,6 +10,7 @@ void Stage::update() {
 	for (EnemyTemplate* e : enemies) {
 		e->move();
 	}
+	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 	//デバッグ用
 	debug();
 }

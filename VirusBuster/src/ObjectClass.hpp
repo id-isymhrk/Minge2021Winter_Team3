@@ -32,12 +32,12 @@ public:
 
 	virtual void draw();
 	virtual void move();
-	void remove();
+	bool remove();
 };
 
 class BulletTemplate
 {
-private:
+protected:
 	RectF Body;
 	int damage;
 
@@ -47,7 +47,7 @@ public:
 
 	virtual void draw();
 	virtual void move();
-	void remove(EnemyTemplate);
+	bool remove(EnemyTemplate);
 };
 
 class EnemyA : public EnemyTemplate {
