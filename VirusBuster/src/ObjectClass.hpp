@@ -6,7 +6,10 @@ class Player
 private:
 	Vec2 position;
 	double angle;
+	Vec2 vecR;		//”­Ë‹O“¹ã‚ÌÀ•W
 
+	RectF Body;
+	Line shot_line;		//”­Ë‹O“¹
 	
 	int BulletType;
 
@@ -14,7 +17,8 @@ public:
 	Player();
 	~Player();
 
-	void draw();
+	void draw() const;
+	void rotate();
 	void SelectBullet();
 	void Shoot();
 };
