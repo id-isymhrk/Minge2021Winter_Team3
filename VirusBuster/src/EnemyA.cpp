@@ -1,6 +1,7 @@
 ﻿#include"ObjectClass.hpp"
 
 EnemyA::EnemyA(RectF body) {
+	HP = 1;
 	Body = body;
 }
 

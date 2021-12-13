@@ -12,6 +12,9 @@ void EnemyTemplate::draw() {
 void EnemyTemplate::move() {
 
 }
-void EnemyTemplate::remove() {
-	
+bool EnemyTemplate::remove() {
+	if (HP <= 0||Body.bottomCenter().y>=600) {
+		return true;
+	}
+	return false;
 }
