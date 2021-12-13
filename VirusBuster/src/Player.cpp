@@ -8,7 +8,7 @@ Player::Player() {
 	Body = RectF(Arg::center(position), 30, 30);
 	shot_line = Line(position.x, position.y, vecR.x, vecR.y);
 
-	BulletType = 0;
+	BulletType = 1;
 }
 
 Player::~Player() {
@@ -38,7 +38,27 @@ void Player::rotate() {
 }
 
 void Player::SelectBullet() {
+	static const int num_type = 4;
 
+	if (Key1.down())
+		BulletType = 1;
+	if (Key2.down())
+		BulletType = 2;
+	if (Key3.down())
+		BulletType = 3;
+	if (Key4.down())
+		BulletType = 4;
+
+	if (KeyRShift.down()) {
+		BulletType++;
+		if (BulletType > num_type)
+			BulletType = 1;
+	}
+	if (KeyLShift.down()) {
+		BulletType--;
+		if (BulletType < 1)
+			BulletType = num_type;
+	}
 }
 
 void Player::Shoot() {
