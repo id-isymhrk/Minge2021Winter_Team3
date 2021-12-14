@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+ <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -139,6 +139,9 @@
     <Filter Include="Source Files\SceneClass">
       <UniqueIdentifier>{dd78ada4-a25e-4552-b842-0340d1124c22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Enemy">
+      <UniqueIdentifier>{a9906a28-a662-4c64-97ae-ee05f4eb3883}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -161,6 +164,12 @@
     </ClCompile>
     <ClCompile Include="src\Stage.cpp">
       <Filter>Source Files\SceneClass</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EnemyA.cpp">
+      <Filter>Source Files\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EnemyTemplate.cpp">
+      <Filter>Source Files\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="src\Player.cpp">
       <Filter>Source Files</Filter>

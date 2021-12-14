@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include"Basic.hpp"
 
 class Player
@@ -25,25 +25,23 @@ public:
 
 class EnemyTemplate
 {
-private:
+protected:
 	int HP;
 	int damage;
 
-
-	RectF Body;
-
 public:
+	RectF Body;
 	EnemyTemplate();
 	~EnemyTemplate();
 
 	virtual void draw();
 	virtual void move();
-	void remove();
+	bool remove();
 };
 
 class BulletTemplate
 {
-private:
+protected:
 	RectF Body;
 	int damage;
 
@@ -53,5 +51,12 @@ public:
 
 	virtual void draw();
 	virtual void move();
-	void remove(EnemyTemplate);
+	bool remove(EnemyTemplate);
+};
+
+class EnemyA : public EnemyTemplate {
+public:
+	EnemyA(RectF body);
+	void move();
+	void draw();
 };
