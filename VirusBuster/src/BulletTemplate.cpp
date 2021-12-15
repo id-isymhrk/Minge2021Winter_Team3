@@ -1,8 +1,7 @@
 ﻿#include "ObjectClass.hpp"
 
-BulletTemplate::BulletTemplate(RectF body, double p_angle) {
-	Body=body;
-	angle = p_angle;
+BulletTemplate::BulletTemplate() {
+
 }
 
 BulletTemplate::~BulletTemplate() {
