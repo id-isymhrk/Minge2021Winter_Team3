@@ -38,7 +38,7 @@ void Player::rotate() {
 }
 
 void Player::SelectBullet() {
-	static const int num_type = 4;
+	static const int max_type = 4;
 
 	if (Key1.down())
 		BulletType = 1;
