@@ -114,8 +114,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Clear.cpp" />
+    <ClCompile Include="src\EnemyA.cpp" />
+    <ClCompile Include="src\EnemyTemplate.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Over.cpp" />
+    <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Stage.cpp" />
     <ClCompile Include="src\Title.cpp" />
     <ClCompile Include="src\Setting.cpp" />
