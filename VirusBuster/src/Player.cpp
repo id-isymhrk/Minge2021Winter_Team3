@@ -16,8 +16,6 @@ Player::~Player() {
 }
 
 void Player::draw() const{
-	Print << BulletType;
-
 	Body.draw(Palette::White);
 	shot_line.drawArrow(2, Vec2(20, 20), Palette::Red);
 }
@@ -63,4 +61,8 @@ void Player::SelectBullet() {
 
 void Player::Shoot() {
 
+}
+
+void Player::debug() {
+	Print << BulletType;
 }
