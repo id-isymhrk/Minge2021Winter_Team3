@@ -7,6 +7,11 @@ Stage::Stage(const InitData& init)
 }
 
 void Stage::update() {
+	//update player
+	player.rotate();
+	player.SelectBullet();
+
+	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->move();
 	}
@@ -16,6 +21,8 @@ void Stage::update() {
 }
 
 void Stage::draw() const {
+	player.draw();
+
 	for (EnemyTemplate* e : enemies) {
 		e->draw();
 	}
@@ -24,4 +31,5 @@ void Stage::draw() const {
 void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
+	player.debug();
 }

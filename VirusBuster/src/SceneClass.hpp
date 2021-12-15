@@ -44,6 +44,7 @@ public:
 
 class Stage :public App::Scene {
 private:
+	Player player;
 	Array<EnemyTemplate*> enemies;
 public:
 	Stage(const InitData& init);
