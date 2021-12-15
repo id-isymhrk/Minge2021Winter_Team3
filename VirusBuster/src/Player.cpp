@@ -59,8 +59,8 @@ void Player::SelectBullet() {
 	}
 }
 
-void Player::Shoot() {
-
+BulletTemplate Player::Shoot() {
+	return BulletTemplate(RectF(position, 5), angle);
 }
 
 void Player::debug() {

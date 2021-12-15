@@ -20,7 +20,7 @@ public:
 	void draw() const;
 	void rotate();
 	void SelectBullet();
-	void Shoot();
+	BulletTemplate Shoot();
 
 	void debug();
 };
@@ -39,17 +39,19 @@ public:
 	virtual void draw();
 	virtual void move();
 	bool remove();
-	void damaged(int);
+	void damaged(int B_damage);
 };
 
 class BulletTemplate
 {
 protected:
 	RectF Body;
+	double angle;
+
 	int damage;
 
 public:
-	BulletTemplate();
+	BulletTemplate(RectF body, double p_angle);
 	~BulletTemplate();
 
 	virtual void draw();
