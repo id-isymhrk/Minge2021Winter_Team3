@@ -51,7 +51,7 @@ void Player::SelectBullet() {
 
 	if (KeyR.down()) {
 		BulletType++;
-		if (BulletType > num_type)
+		if (BulletType > max_type)
 			BulletType = 1;
 	}
 	if (KeyE.down()) {
