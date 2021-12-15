@@ -17,13 +17,12 @@ void Stage::update() {
 	for (BulletTemplate* b : bullets) {
 		b->move();
 	}
-	/*for (int i = 0; i < bullets.size(); i++) {
-
-	}*/
 
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->move();
+
+		bullets.remove_if([&e](BulletTemplate* b) {return b->remove(e); });
 	}
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 	//デバッグ用
