@@ -1,5 +1,6 @@
 ﻿#pragma once
-#include "Basic.hpp"
+//#include "Basic.hpp"
+#include"ObjectClass.hpp"
 
 class Title :public App::Scene {
 private:
@@ -43,6 +44,7 @@ public:
 
 class Stage :public App::Scene {
 private:
+	Player player;
 
 public:
 	Stage(const InitData& init);
