@@ -17,7 +17,7 @@ Player::~Player() {
 
 void Player::draw() const{
 	Body.draw(Palette::White);
-	shot_line.drawArrow(2, Vec2(20, 20), Palette::Red);
+	shot_line.drawArrow(2, Vec2(10, 10), Palette::Red);
 }
 
 void Player::rotate() {
@@ -59,10 +59,11 @@ void Player::SelectBullet() {
 	}
 }
 
-BulletTemplate Player::Shoot() {
-	return BulletTemplate(RectF(position, 5), angle);
+BulletTemplate* Player::Shoot() {
+	return (BulletTemplate*)new bullet_norm(RectF(position, 5), angle);
 }
 
 void Player::debug() {
 	Print << BulletType;
+	Print << angle;
 }

@@ -11,6 +11,16 @@ void Stage::update() {
 	player.rotate();
 	player.SelectBullet();
 
+	if (KeySpace.down()) {
+		bullets << player.Shoot();
+	}
+	for (BulletTemplate* b : bullets) {
+		b->move();
+	}
+	/*for (int i = 0; i < bullets.size(); i++) {
+
+	}*/
+
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->move();
@@ -22,6 +32,10 @@ void Stage::update() {
 
 void Stage::draw() const {
 	player.draw();
+
+	for (BulletTemplate* b : bullets) {
+		b->draw();
+	}
 
 	for (EnemyTemplate* e : enemies) {
 		e->draw();

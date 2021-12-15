@@ -69,7 +69,7 @@ public:
 	void draw() const;
 	void rotate();
 	void SelectBullet();
-	BulletTemplate Shoot();
+	BulletTemplate* Shoot();
 
 	void debug();
 };
