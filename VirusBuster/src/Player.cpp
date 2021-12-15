@@ -54,7 +54,7 @@ void Player::SelectBullet() {
 		if (BulletType > num_type)
 			BulletType = 1;
 	}
-	if (KeyLShift.down()) {
+	if (KeyE.down()) {
 		BulletType--;
 		if (BulletType < 1)
 			BulletType = num_type;
