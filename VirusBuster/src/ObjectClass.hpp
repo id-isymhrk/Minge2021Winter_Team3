@@ -27,7 +27,7 @@ protected:
 	int damage;
 
 public:
-	BulletTemplate(RectF body, double p_angle);
+	BulletTemplate();
 	~BulletTemplate();
 
 	virtual void draw();
@@ -38,6 +38,14 @@ public:
 class EnemyA : public EnemyTemplate {
 public:
 	EnemyA(RectF body);
+	void move();
+	void draw();
+};
+
+class bullet_norm :public BulletTemplate {
+private:
+public:
+	bullet_norm(RectF body, double p_angle);
 	void move();
 	void draw();
 };

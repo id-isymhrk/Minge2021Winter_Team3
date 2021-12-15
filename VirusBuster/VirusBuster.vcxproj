@@ -114,6 +114,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\BulletTemplate.cpp" />
+    <ClCompile Include="src\bullet_norm.cpp" />
     <ClCompile Include="src\Clear.cpp" />
     <ClCompile Include="src\EnemyA.cpp" />
     <ClCompile Include="src\EnemyTemplate.cpp" />
