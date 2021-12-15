@@ -2,7 +2,8 @@
 
 Player::Player() {
 	position = Scene::Center();
-	angle = Math::Pi / 2;
+	//angle = Math::Pi / 2;
+	angle = 0;
 	vecR = OffsetCircular(position, 400, angle);
 
 	Body = RectF(Arg::center(position), 30, 30);
@@ -17,17 +18,32 @@ Player::~Player() {
 
 void Player::draw() const{
 	Body.draw(Palette::White);
-	shot_line.drawArrow(2, Vec2(10, 10), Palette::Red);
+	shot_line.drawArrow(1, Vec2(10, 20), Palette::Red);
 }
 
 void Player::rotate() {
 	static const double R = Math::Pi / 90;
 
 	if (KeyRight.pressed()) {
-		angle += R;
+		if (KeyShift.pressed()) {
+			angle += R / 2;
+		}
+		else {
+			angle += R;
+		}
+
+		if (angle > 2 * Math::Pi)
+			angle -= 2 * Math::Pi;
 	}
 	if (KeyLeft.pressed()) {
-		angle -= R;
+		if (KeyShift.pressed()) {
+			angle -= R / 2;
+		}
+		else {
+			angle -= R;
+		}
+		if (angle < 0)
+			angle += 2 * Math::Pi;
 	}
 
 	vecR = OffsetCircular(position, 400, angle);
@@ -60,7 +76,7 @@ void Player::SelectBullet() {
 }
 
 BulletTemplate* Player::Shoot() {
-	return (BulletTemplate*)new bullet_norm(RectF(position, 5), angle);
+	return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
 }
 
 void Player::debug() {
