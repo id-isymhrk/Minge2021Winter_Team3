@@ -21,6 +21,8 @@ public:
 	void rotate();
 	void SelectBullet();
 	void Shoot();
+
+	void debug();
 };
 
 class EnemyTemplate
@@ -37,6 +39,7 @@ public:
 	virtual void draw();
 	virtual void move();
 	bool remove();
+	void damaged(int);
 };
 
 class BulletTemplate
@@ -51,7 +54,7 @@ public:
 
 	virtual void draw();
 	virtual void move();
-	bool remove(EnemyTemplate);
+	bool remove(EnemyTemplate*);
 };
 
 class EnemyA : public EnemyTemplate {
