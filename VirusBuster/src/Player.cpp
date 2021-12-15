@@ -49,7 +49,7 @@ void Player::SelectBullet() {
 	if (Key4.down())
 		BulletType = 4;
 
-	if (KeyRShift.down()) {
+	if (KeyR.down()) {
 		BulletType++;
 		if (BulletType > num_type)
 			BulletType = 1;
