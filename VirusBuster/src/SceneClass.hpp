@@ -1,6 +1,6 @@
 ﻿#pragma once
-//#include "Basic.hpp"
-#include"ObjectClass.hpp"
+#include "Basic.hpp"
+#include "ObjectClass.hpp"
 
 class Title :public App::Scene {
 private:
@@ -44,8 +44,7 @@ public:
 
 class Stage :public App::Scene {
 private:
-	Player player;
-
+	Array<EnemyTemplate*> enemies;
 public:
 	Stage(const InitData& init);
 	void update() override;
