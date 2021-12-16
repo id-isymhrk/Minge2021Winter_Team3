@@ -62,6 +62,8 @@ private:
 
 	int BulletType;
 
+	double shot_time;
+
 public:
 	Player();
 	~Player();
@@ -70,6 +72,7 @@ public:
 	void rotate();
 	void SelectBullet();
 	BulletTemplate* Shoot();
+	bool check_shotcool();
 
 	void debug();
 };

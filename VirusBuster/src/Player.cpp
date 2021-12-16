@@ -10,6 +10,8 @@ Player::Player() {
 	shot_line = Line(position.x, position.y, vecR.x, vecR.y);
 
 	BulletType = 1;
+
+	shot_time = 0;
 }
 
 Player::~Player() {
@@ -77,6 +79,17 @@ void Player::SelectBullet() {
 
 BulletTemplate* Player::Shoot() {
 	return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
+}
+
+bool Player::check_shotcool() {
+	static constexpr double shot_cool = 0.2;
+
+	if ((Scene::Time() - shot_time) > shot_cool) {
+		shot_time = Scene::Time();
+		return true;
+	}
+	else
+		return false;
 }
 
 void Player::debug() {
