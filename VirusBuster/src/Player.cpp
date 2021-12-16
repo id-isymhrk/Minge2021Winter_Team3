@@ -22,7 +22,7 @@ void Player::draw() const{
 }
 
 void Player::rotate() {
-	static const double R = Math::Pi / 90;
+	static constexpr double R = Math::Pi / 90;
 
 	if (KeyRight.pressed()) {
 		if (KeyShift.pressed()) {
