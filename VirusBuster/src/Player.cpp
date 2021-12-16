@@ -1,7 +1,7 @@
 ﻿#include"ObjectClass.hpp"
 
 Player::Player() {
-	position = Scene::Center();
+	position = Vec2((Scene::Width()/2), Scene::Height());
 	//angle = Math::Pi / 2;
 	angle = 0;
 	vecR = OffsetCircular(position, 400, angle);
@@ -10,6 +10,8 @@ Player::Player() {
 	shot_line = Line(position.x, position.y, vecR.x, vecR.y);
 
 	BulletType = 1;
+
+	shot_time = 0;
 }
 
 Player::~Player() {
@@ -32,8 +34,8 @@ void Player::rotate() {
 			angle += R;
 		}
 
-		if (angle > 2 * Math::Pi)
-			angle -= 2 * Math::Pi;
+		if (angle > Math::Pi / 2)
+			angle = Math::Pi / 2;
 	}
 	if (KeyLeft.pressed()) {
 		if (KeyShift.pressed()) {
@@ -42,8 +44,8 @@ void Player::rotate() {
 		else {
 			angle -= R;
 		}
-		if (angle < 0)
-			angle += 2 * Math::Pi;
+		if (angle < (-1) * Math::Pi / 2)
+			angle = (-1) * Math::Pi / 2;
 	}
 
 	vecR = OffsetCircular(position, 400, angle);
@@ -63,12 +65,12 @@ void Player::SelectBullet() {
 	if (Key4.down())
 		BulletType = 4;
 
-	if (KeyR.down()) {
+	if (KeyR.down() || KeyUp.down()) {
 		BulletType++;
 		if (BulletType > max_type)
 			BulletType = 1;
 	}
-	if (KeyE.down()) {
+	if (KeyE.down() || KeyDown.down()) {
 		BulletType--;
 		if (BulletType < 1)
 			BulletType = max_type;
@@ -77,6 +79,17 @@ void Player::SelectBullet() {
 
 BulletTemplate* Player::Shoot() {
 	return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
+}
+
+bool Player::check_shotcool() {
+	static constexpr double shot_cool = 0.2;
+
+	if ((Scene::Time() - shot_time) > shot_cool) {
+		shot_time = Scene::Time();
+		return true;
+	}
+	else
+		return false;
 }
 
 void Player::debug() {
