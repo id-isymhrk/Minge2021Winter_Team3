@@ -22,8 +22,8 @@ bool BulletTemplate::remove(EnemyTemplate* enemy) {
 
 		return true;
 	}
-	else if (Body.center().x <= 0 || Body.center().x >= Scene::Width() ||
-		Body.center().y <= 0 || Body.center().y >= Scene::Height()) {
+	else if (0 >= Body.center().x || Body.center().x >= Scene::Width() ||
+		0 >= Body.center().y || Body.center().y >= Scene::Height()) {
 
 		return true;
 	}
