@@ -1,13 +1,10 @@
 ﻿#include"ObjectClass.hpp"
 
 Player::Player() {
+	angle = -Math::Pi / 2;
 	position = Vec2((Scene::Width()/2), Scene::Height());
-	//angle = Math::Pi / 2;
-	angle = 0;
-	vecR = OffsetCircular(position, 400, angle);
 
 	Body = RectF(Arg::center(position), 30, 30);
-	shot_line = Line(position.x, position.y, vecR.x, vecR.y);
 
 	BulletType = 1;
 
@@ -20,7 +17,7 @@ Player::~Player() {
 
 void Player::draw() const{
 	Body.draw(Palette::White);
-	shot_line.drawArrow(1, Vec2(10, 20), Palette::Red);
+	Line(position.x, position.y, 400 * cos(angle) + position.x, 400 * sin(angle) + position.y).drawArrow(1, Vec2(10, 20), Palette::Red);
 }
 
 void Player::rotate() {
@@ -47,10 +44,6 @@ void Player::rotate() {
 		if (angle < (-1) * Math::Pi / 2)
 			angle = (-1) * Math::Pi / 2;
 	}
-
-	vecR = OffsetCircular(position, 400, angle);
-
-	shot_line = Line(position.x, position.y, vecR.x, vecR.y);
 }
 
 void Player::SelectBullet() {

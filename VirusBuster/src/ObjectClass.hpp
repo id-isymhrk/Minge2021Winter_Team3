@@ -23,7 +23,7 @@ class BulletTemplate
 protected:
 	RectF Body;
 	double angle;
-
+	int reflectCount=100000;
 	int damage;
 
 public:
@@ -32,7 +32,7 @@ public:
 
 	virtual void draw();
 	virtual void move();
-	bool remove(EnemyTemplate*);
+	bool remove(Array<EnemyTemplate*>);
 };
 
 class EnemyA : public EnemyTemplate {
@@ -55,10 +55,8 @@ class Player
 private:
 	Vec2 position;
 	double angle;
-	Vec2 vecR;
 
 	RectF Body;
-	Line shot_line;
 
 	int BulletType;
 

@@ -21,9 +21,8 @@ void Stage::update() {
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->move();
-
-		bullets.remove_if([&e](BulletTemplate* b) {return b->remove(e); });
 	}
+	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 	//デバッグ用
 	debug();

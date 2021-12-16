@@ -139,6 +139,12 @@
     <Filter Include="Source Files\SceneClass">
       <UniqueIdentifier>{dd78ada4-a25e-4552-b842-0340d1124c22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Enemies">
+      <UniqueIdentifier>{b28c0e37-48f8-4824-adbe-f7f74f7312a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bullets">
+      <UniqueIdentifier>{0e031b0d-dd92-4b05-ae5f-85e44f83c596}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -166,16 +172,16 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\EnemyA.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Enemies</Filter>
     </ClCompile>
     <ClCompile Include="src\EnemyTemplate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\BulletTemplate.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Enemies</Filter>
     </ClCompile>
     <ClCompile Include="src\bullet_norm.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BulletTemplate.cpp">
+      <Filter>Source Files\Bullets</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
