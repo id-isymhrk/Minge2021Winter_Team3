@@ -29,7 +29,7 @@ void Title::update() {
         }
     }
 	//デバッグ用
-	debug();
+	//debug();
 }
 
 void Title::draw() const {
