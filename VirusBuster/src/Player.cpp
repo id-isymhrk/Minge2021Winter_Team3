@@ -32,8 +32,8 @@ void Player::rotate() {
 			angle += R;
 		}
 
-		if (angle > 2 * Math::Pi)
-			angle -= 2 * Math::Pi;
+		if (angle > Math::Pi / 2)
+			angle = Math::Pi / 2;
 	}
 	if (KeyLeft.pressed()) {
 		if (KeyShift.pressed()) {
@@ -42,8 +42,8 @@ void Player::rotate() {
 		else {
 			angle -= R;
 		}
-		if (angle < 0)
-			angle += 2 * Math::Pi;
+		if (angle < (-1) * Math::Pi / 2)
+			angle = (-1) * Math::Pi / 2;
 	}
 
 	vecR = OffsetCircular(position, 400, angle);
