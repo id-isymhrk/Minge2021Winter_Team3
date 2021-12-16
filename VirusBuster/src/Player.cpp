@@ -1,7 +1,7 @@
 ﻿#include"ObjectClass.hpp"
 
 Player::Player() {
-	position = Scene::Center();
+	position = Vec2((Scene::Width()/2), Scene::Height());
 	//angle = Math::Pi / 2;
 	angle = 0;
 	vecR = OffsetCircular(position, 400, angle);
