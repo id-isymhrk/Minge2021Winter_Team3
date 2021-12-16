@@ -5,11 +5,13 @@ void Main()
 
 	App manager;
 	manager
-		.add<Title>(State::Title)
-		.add<Setting>(State::Setting);
+		//.add<Title>(State::Title)
+		//.add<Setting>(State::Setting)
+		.add<Stage>(State::Stage);
 
 	// 背景の色を設定 | Set background color
-	Scene::SetBackground(ColorF{ 0.8, 0.9, 1.0 });
+	//Scene::SetBackground(ColorF{ 0.8, 0.9, 1.0 });
+	Scene::SetBackground(Palette::Black);
 
 	while (System::Update())
 	{

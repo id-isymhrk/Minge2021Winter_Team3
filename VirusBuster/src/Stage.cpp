@@ -7,8 +7,22 @@ Stage::Stage(const InitData& init)
 }
 
 void Stage::update() {
+	//update player
+	player.rotate();
+	player.SelectBullet();
+
+	if (KeySpace.down()) {
+		bullets << player.Shoot();
+	}
+	for (BulletTemplate* b : bullets) {
+		b->move();
+	}
+
+	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->move();
+
+		bullets.remove_if([&e](BulletTemplate* b) {return b->remove(e); });
 	}
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 	//デバッグ用
@@ -16,6 +30,12 @@ void Stage::update() {
 }
 
 void Stage::draw() const {
+	player.draw();
+
+	for (BulletTemplate* b : bullets) {
+		b->draw();
+	}
+
 	for (EnemyTemplate* e : enemies) {
 		e->draw();
 	}
@@ -24,4 +44,5 @@ void Stage::draw() const {
 void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
+	player.debug();
 }

@@ -1,28 +1,6 @@
 Ôªø#pragma once
 #include"Basic.hpp"
 
-class Player
-{
-private:
-	Vec2 position;
-	double angle;
-	Vec2 vecR;		//î≠éÀãOìπè„ÇÃç¿ïW
-
-	RectF Body;
-	Line shot_line;		//î≠éÀãOìπ
-	
-	int BulletType;
-
-public:
-	Player();
-	~Player();
-
-	void draw() const;
-	void rotate();
-	void SelectBullet();
-	void Shoot();
-};
-
 class EnemyTemplate
 {
 protected:
@@ -37,12 +15,15 @@ public:
 	virtual void draw();
 	virtual void move();
 	bool remove();
+	void damaged(int B_damage);
 };
 
 class BulletTemplate
 {
 protected:
 	RectF Body;
+	double angle;
+
 	int damage;
 
 public:
@@ -51,7 +32,7 @@ public:
 
 	virtual void draw();
 	virtual void move();
-	bool remove(EnemyTemplate);
+	bool remove(EnemyTemplate*);
 };
 
 class EnemyA : public EnemyTemplate {
@@ -59,4 +40,36 @@ public:
 	EnemyA(RectF body);
 	void move();
 	void draw();
+};
+
+class bullet_norm :public BulletTemplate {
+private:
+public:
+	bullet_norm(RectF body, double p_angle);
+	void move();
+	void draw();
+};
+
+class Player
+{
+private:
+	Vec2 position;
+	double angle;
+	Vec2 vecR;
+
+	RectF Body;
+	Line shot_line;
+
+	int BulletType;
+
+public:
+	Player();
+	~Player();
+
+	void draw() const;
+	void rotate();
+	void SelectBullet();
+	BulletTemplate* Shoot();
+
+	void debug();
 };

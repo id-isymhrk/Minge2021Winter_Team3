@@ -44,7 +44,10 @@ public:
 
 class Stage :public App::Scene {
 private:
+	Player player;
 	Array<EnemyTemplate*> enemies;
+	Array<BulletTemplate*> bullets;
+
 public:
 	Stage(const InitData& init);
 	void update() override;
