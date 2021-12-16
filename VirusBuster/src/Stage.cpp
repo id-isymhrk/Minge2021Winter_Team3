@@ -11,10 +11,8 @@ void Stage::update() {
 	player.rotate();
 	player.SelectBullet();
 
-	if (KeySpace.pressed()) {
-		if (player.check_shotcool()) {
-			bullets << player.Shoot();
-		}
+	if (KeySpace.pressed() && player.check_shotcool()) {
+		bullets << player.Shoot();
 	}
 	for (BulletTemplate* b : bullets) {
 		b->move();
