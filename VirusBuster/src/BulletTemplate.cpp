@@ -16,18 +16,20 @@ void BulletTemplate::move() {
 
 }
 
-bool BulletTemplate::remove(EnemyTemplate* enemy) {
-	if (Body.intersects(enemy->Body)) {
-		enemy->damaged(damage);
+bool BulletTemplate::remove(Array<EnemyTemplate*> enemies) {
+	bool flg = false;
+	if (0 > Body.center().x || Body.center().x > Scene::Width() ||
+		0 > Body.center().y || Body.center().y > Scene::Height()) {
+		flg = true;
+	} else if (reflectCount <= 0) {
+		flg = true;
+	}
+	for (EnemyTemplate* enemy : enemies) {
+		if (Body.intersects(enemy->Body)) {
+			enemy->damaged(damage);
 
-		return true;
+			flg=true;
+		}
 	}
-	else if (0 >= Body.center().x || Body.center().x >= Scene::Width() ||
-		0 >= Body.center().y || Body.center().y >= Scene::Height()) {
-
-		return true;
-	}
-	else {
-		return false;
-	}
+	return flg;
 }
