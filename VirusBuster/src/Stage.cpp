@@ -11,7 +11,7 @@ void Stage::update() {
 	player.rotate();
 	player.SelectBullet();
 
-	if (KeySpace.down()) {
+	if (KeySpace.pressed()) {
 		bullets << player.Shoot();
 	}
 	for (BulletTemplate* b : bullets) {
