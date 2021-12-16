@@ -8,7 +8,7 @@ bullet_norm::bullet_norm(RectF body, double p_angle) {
 }
 
 void bullet_norm::move() {
-	static constexpr float speed = 20;
+	static constexpr float speed = 4;
 
 	Body.x += speed * cos(angle);
 	Body.y += speed * sin(angle);
