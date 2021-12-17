@@ -17,11 +17,14 @@ void BulletTemplate::move() {
 }
 
 bool BulletTemplate::remove(Array<EnemyTemplate*> enemies) {
+	static constexpr double rm_area = 10;	//削除しない範囲を拡大させるための変数
 	bool flg = false;
-	if (0 > Body.center().x || Body.center().x > Scene::Width() ||
+
+	if (-rm_area > Body.center().x || Body.center().x > Scene::Width() + rm_area ||
 		0 > Body.center().y || Body.center().y > Scene::Height()) {
 		flg = true;
-	} else if (reflectCount <= 0) {
+	}
+	else if (reflectCount <= 0) {
 		flg = true;
 	}
 	for (EnemyTemplate* enemy : enemies) {
