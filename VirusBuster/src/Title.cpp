@@ -1,4 +1,4 @@
-#include"SceneClass.hpp"
+﻿#include"SceneClass.hpp"
 
 Title::Title(const InitData& init)
 	:IScene(init)
@@ -51,15 +51,14 @@ void Title::draw() const {
 }
 
 void Title::debug() {
-	//// テキストを画面にデバッグ出力 | Print a text
-	//Print << U"Push [A] key";
-	// もし [A] キーが押されたら | When [A] key is down
-	if (KeyA.down()){
-		// 選択肢からランダムに選ばれたメッセージをデバッグ表示
-		Print << Sample({ U"Hello!", U"こんにちは", U"你好", U"안녕하세요?" });
-	}
-	//Sキーで設定画面に移動します
-	if (KeyS.down()) {
-		changeScene(State::Setting);
-	}
+    //// テキストを画面にデバッグ出力 | Print a text
+    //Print << U"Push [A] key";
+    // もし [A] キーが押されたら | When [A] key is down
+    if (KeyA.down()) {
+        // 選択肢からランダムに選ばれたメッセージをデバッグ表示
+        Print << Sample({ U"Hello!", U"こんにちは", U"你好", U"안녕하세요?" });
+    }
+    //Sキーで設定画面に移動します
+    if (KeyS.down())
+        changeScene(State::Setting);
 }
