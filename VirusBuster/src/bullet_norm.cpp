@@ -15,13 +15,14 @@ void bullet_norm::move() {
 	if (0 >= Body.x || Body.x >= Scene::Width()) {
 		reflectCount--;
 		angle=Vec2(sin(angle), cos(angle)).getAngle();
-		if (0 >= Body.x) {
+		/*if (0 >= Body.x) {
 			Body.x *= -1;
-		} else {
-			Body.x = 2.0 * Scene::Width() - Body.x;
 		}
+		else {
+			Body.x = 2.0 * Scene::Width() - Body.x;
+		}*/
 	}
-	if (0 >= Body.y || Body.y >= Scene::Height()) {
+	/*if (0 >= Body.y || Body.y >= Scene::Height()) {
 		reflectCount--;
 		angle = Vec2(-sin(angle), -cos(angle)).getAngle();
 		if (0 >= Body.y) {
@@ -29,7 +30,7 @@ void bullet_norm::move() {
 		} else {
 			Body.y = 2.0 * Scene::Height() - Body.y;
 		}
-	}
+	}*/
 }
 
 void bullet_norm::draw() {
