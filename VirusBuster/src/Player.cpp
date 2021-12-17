@@ -41,8 +41,8 @@ void Player::rotate() {
 		else {
 			angle -= R;
 		}
-		if (angle < (-1) * Math::Pi)
-			angle = (-1) * Math::Pi;
+		if (angle < -Math::Pi)
+			angle = -Math::Pi;
 	}
 }
 
