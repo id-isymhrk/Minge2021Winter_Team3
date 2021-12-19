@@ -31,8 +31,8 @@ void Player::rotate() {
 			angle += R;
 		}
 
-		if (angle > Math::Pi / 2)
-			angle = Math::Pi / 2;
+		if (angle > 0)
+			angle = 0;
 	}
 	if (KeyLeft.pressed()) {
 		if (KeyShift.pressed()) {
@@ -41,8 +41,8 @@ void Player::rotate() {
 		else {
 			angle -= R;
 		}
-		if (angle < (-1) * Math::Pi / 2)
-			angle = (-1) * Math::Pi / 2;
+		if (angle < -Math::Pi)
+			angle = -Math::Pi;
 	}
 }
 
