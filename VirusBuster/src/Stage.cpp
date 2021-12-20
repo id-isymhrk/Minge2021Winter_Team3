@@ -13,7 +13,7 @@ void Stage::update() {
 	player.rotate();
 	player.SelectBullet();
 
-	if (KeySpace.down()) {
+	if (KeySpace.pressed() && player.check_shotcool()) {
 		bullets << player.Shoot();
 	}
 	for (BulletTemplate* b : bullets) {
@@ -23,9 +23,8 @@ void Stage::update() {
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->move();
-
-		bullets.remove_if([&e](BulletTemplate* b) {return b->remove(e); });
 	}
+	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 	//デバッグ用
 	debug();
@@ -46,5 +45,14 @@ void Stage::draw() const {
 void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
+	Print << Scene::Time();
 	player.debug();
+}
+
+bool is_inside(RectF body, double x1, double y1, double x2, double y2) {
+	if (x1 <= body.center().x or body.center().x <= x2 or
+		y1 <= body.center().y or body.center().y <= y2) {
+		return true;
+	}
+	return false;
 }

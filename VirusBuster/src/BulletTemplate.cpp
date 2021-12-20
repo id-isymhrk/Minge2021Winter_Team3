@@ -16,18 +16,22 @@ void BulletTemplate::move() {
 
 }
 
-bool BulletTemplate::remove(EnemyTemplate* enemy) {
-	if (Body.intersects(enemy->Body)) {
-		enemy->damaged(damage);
+bool BulletTemplate::remove(Array<EnemyTemplate*> enemies) {
+	static constexpr double expand_rm_area = 10;	//削除しない範囲を拡大させるための変数
+	bool is_removed = false;
 
-		return true;
+	if (!is_inside(Body, -expand_rm_area, -expand_rm_area, Scene::Width() + expand_rm_area, Scene::Height() + expand_rm_area)) {
+		is_removed = true;
 	}
-	else if (0 >= Body.center().x || Body.center().x >= Scene::Width() ||
-		0 >= Body.center().y || Body.center().y >= Scene::Height()) {
+	else if (reflectCount <= 0) {
+		is_removed = true;
+	}
+	for (EnemyTemplate* enemy : enemies) {
+		if (Body.intersects(enemy->Body)) {
+			enemy->damaged(damage);
 
-		return true;
+			is_removed=true;
+		}
 	}
-	else {
-		return false;
-	}
+	return is_removed;
 }
