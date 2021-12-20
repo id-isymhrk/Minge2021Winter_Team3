@@ -6,6 +6,9 @@ EnemyTemplate::EnemyTemplate() {
 EnemyTemplate::~EnemyTemplate() {
 
 }
+void EnemyTemplate::update() {
+	move();
+}
 void EnemyTemplate::draw() {
 
 }

@@ -8,6 +8,10 @@ BulletTemplate::~BulletTemplate() {
 
 }
 
+void BulletTemplate::update() {
+	move();
+}
+
 void BulletTemplate::draw() {
 
 }

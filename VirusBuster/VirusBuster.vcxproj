@@ -117,6 +117,8 @@
     <ClCompile Include="src\bullet_norm.cpp" />
     <ClCompile Include="src\Clear.cpp" />
     <ClCompile Include="src\EnemyA.cpp" />
+    <ClCompile Include="src\EnemyB.cpp" />
+    <ClCompile Include="src\EnemyC.cpp" />
     <ClCompile Include="src\EnemyTemplate.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Over.cpp" />
