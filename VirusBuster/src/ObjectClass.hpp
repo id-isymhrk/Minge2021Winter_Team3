@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include"Basic.hpp"
 
 class EnemyTemplate
@@ -12,10 +12,11 @@ public:
 	EnemyTemplate();
 	~EnemyTemplate();
 
+	virtual void update();
 	virtual void draw();
 	virtual void move();
+	virtual void damaged(int B_damage);
 	bool remove();
-	void damaged(int B_damage);
 };
 
 class BulletTemplate
@@ -30,6 +31,7 @@ public:
 	BulletTemplate();
 	~BulletTemplate();
 
+	virtual void update();
 	virtual void draw();
 	virtual void move();
 	bool remove(Array<EnemyTemplate*>);
@@ -74,15 +76,17 @@ private:
 
 	double shot_time;
 
-public:
-	Player();
-	~Player();
-
-	void draw() const;
 	void rotate();
 	void SelectBullet();
 	BulletTemplate* Shoot();
 	bool check_shotcool();
+
+public:
+	Player();
+	~Player();
+
+	void update(Array<BulletTemplate*>&);
+	void draw() const;
 
 	void debug();
 };

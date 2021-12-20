@@ -1,4 +1,4 @@
-#include"SceneClass.hpp"
+﻿#include"SceneClass.hpp"
 #include"ObjectClass.hpp"
 
 Stage::Stage(const InitData& init)
@@ -10,19 +10,16 @@ Stage::Stage(const InitData& init)
 
 void Stage::update() {
 	//update player
-	player.rotate();
-	player.SelectBullet();
-
-	if (KeySpace.pressed() && player.check_shotcool()) {
-		bullets << player.Shoot();
-	}
+	player.update(bullets);
+	
+	//update bullet
 	for (BulletTemplate* b : bullets) {
-		b->move();
+		b->update();
 	}
 
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
-		e->move();
+		e->update();
 	}
 	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });

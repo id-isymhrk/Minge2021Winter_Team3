@@ -15,6 +15,15 @@ Player::~Player() {
 
 }
 
+void Player::update(Array<BulletTemplate*>& bullets) {
+	rotate();
+	SelectBullet();
+
+	if (KeySpace.pressed() && check_shotcool()) {
+		bullets << Shoot();
+	}
+}
+
 void Player::draw() const{
 	Body.draw(Palette::White);
 	Line(position.x, position.y, 400 * cos(angle) + position.x, 400 * sin(angle) + position.y).drawArrow(1, Vec2(10, 20), Palette::Red);
