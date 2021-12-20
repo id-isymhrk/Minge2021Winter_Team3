@@ -37,6 +37,18 @@
 		2C5C470F26B4F08A005E8C85 /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5C470D26B4F08A005E8C85 /* libopus.a */; };
 		2C5C471126B4F08E005E8C85 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5C471026B4F08E005E8C85 /* libzlib.a */; };
 		2C6906D82298140F00A427D0 /* engine in Resources */ = {isa = PBXBuildFile; fileRef = 2C6906D72298140F00A427D0 /* engine */; };
+		E136AF75276F35260085901F /* EnemyC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1159126276F3264005B5FBA /* EnemyC.cpp */; };
+		E15E9CB9276B5880009DFCF3 /* BulletTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CAB276B587F009DFCF3 /* BulletTemplate.cpp */; };
+		E15E9CBA276B5880009DFCF3 /* bullet_norm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CAC276B587F009DFCF3 /* bullet_norm.cpp */; };
+		E15E9CBB276B5880009DFCF3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CAD276B587F009DFCF3 /* Player.cpp */; };
+		E15E9CBC276B5880009DFCF3 /* Setting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CAE276B587F009DFCF3 /* Setting.cpp */; };
+		E15E9CBD276B5880009DFCF3 /* Over.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CAF276B587F009DFCF3 /* Over.cpp */; };
+		E15E9CBE276B5880009DFCF3 /* Title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CB0276B587F009DFCF3 /* Title.cpp */; };
+		E15E9CBF276B5880009DFCF3 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CB1276B587F009DFCF3 /* Stage.cpp */; };
+		E15E9CC0276B5880009DFCF3 /* EnemyA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CB3276B587F009DFCF3 /* EnemyA.cpp */; };
+		E15E9CC1276B5880009DFCF3 /* EnemyTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CB4276B587F009DFCF3 /* EnemyTemplate.cpp */; };
+		E15E9CC2276B5880009DFCF3 /* EnemyB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CB5276B587F009DFCF3 /* EnemyB.cpp */; };
+		E15E9CC3276B5880009DFCF3 /* Clear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E15E9CB6276B587F009DFCF3 /* Clear.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +84,21 @@
 		2C5C470D26B4F08A005E8C85 /* libopus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopus.a; path = ../../lib/macOS/opus/libopus.a; sourceTree = "<group>"; };
 		2C5C471026B4F08E005E8C85 /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzlib.a; path = ../../lib/macOS/zlib/libzlib.a; sourceTree = "<group>"; };
 		2C6906D72298140F00A427D0 /* engine */ = {isa = PBXFileReference; lastKnownFileType = folder; name = engine; path = App/engine; sourceTree = "<group>"; };
+		E1159126276F3264005B5FBA /* EnemyC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyC.cpp; sourceTree = "<group>"; };
+		E15E9CAB276B587F009DFCF3 /* BulletTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BulletTemplate.cpp; sourceTree = "<group>"; };
+		E15E9CAC276B587F009DFCF3 /* bullet_norm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bullet_norm.cpp; sourceTree = "<group>"; };
+		E15E9CAD276B587F009DFCF3 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		E15E9CAE276B587F009DFCF3 /* Setting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Setting.cpp; sourceTree = "<group>"; };
+		E15E9CAF276B587F009DFCF3 /* Over.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Over.cpp; sourceTree = "<group>"; };
+		E15E9CB0276B587F009DFCF3 /* Title.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Title.cpp; sourceTree = "<group>"; };
+		E15E9CB1276B587F009DFCF3 /* Stage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stage.cpp; sourceTree = "<group>"; };
+		E15E9CB2276B587F009DFCF3 /* SceneClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SceneClass.hpp; sourceTree = "<group>"; };
+		E15E9CB3276B587F009DFCF3 /* EnemyA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyA.cpp; sourceTree = "<group>"; };
+		E15E9CB4276B587F009DFCF3 /* EnemyTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyTemplate.cpp; sourceTree = "<group>"; };
+		E15E9CB5276B587F009DFCF3 /* EnemyB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyB.cpp; sourceTree = "<group>"; };
+		E15E9CB6276B587F009DFCF3 /* Clear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Clear.cpp; sourceTree = "<group>"; };
+		E15E9CB7276B5880009DFCF3 /* Basic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Basic.hpp; sourceTree = "<group>"; };
+		E15E9CB8276B5880009DFCF3 /* ObjectClass.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ObjectClass.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +162,21 @@
 		2C1778981CE0AA7C00BB8AD0 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E15E9CB7276B5880009DFCF3 /* Basic.hpp */,
+				E15E9CAC276B587F009DFCF3 /* bullet_norm.cpp */,
+				E15E9CAB276B587F009DFCF3 /* BulletTemplate.cpp */,
+				E15E9CB6276B587F009DFCF3 /* Clear.cpp */,
+				E15E9CB3276B587F009DFCF3 /* EnemyA.cpp */,
+				E15E9CB5276B587F009DFCF3 /* EnemyB.cpp */,
+				E1159126276F3264005B5FBA /* EnemyC.cpp */,
+				E15E9CB4276B587F009DFCF3 /* EnemyTemplate.cpp */,
+				E15E9CB8276B5880009DFCF3 /* ObjectClass.hpp */,
+				E15E9CAF276B587F009DFCF3 /* Over.cpp */,
+				E15E9CAD276B587F009DFCF3 /* Player.cpp */,
+				E15E9CB2276B587F009DFCF3 /* SceneClass.hpp */,
+				E15E9CAE276B587F009DFCF3 /* Setting.cpp */,
+				E15E9CB1276B587F009DFCF3 /* Stage.cpp */,
+				E15E9CB0276B587F009DFCF3 /* Title.cpp */,
 				2C1778991CE0AA7C00BB8AD0 /* Main.cpp */,
 			);
 			path = src;
@@ -207,7 +249,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2C17787D1CE0A9D800BB8AD0 /* Build configuration list for PBXProject "empty" */;
+			buildConfigurationList = 2C17787D1CE0A9D800BB8AD0 /* Build configuration list for PBXProject "VirusBuster" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -242,7 +284,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15E9CBB276B5880009DFCF3 /* Player.cpp in Sources */,
+				E15E9CC3276B5880009DFCF3 /* Clear.cpp in Sources */,
 				2C17789A1CE0AA7C00BB8AD0 /* Main.cpp in Sources */,
+				E15E9CBE276B5880009DFCF3 /* Title.cpp in Sources */,
+				E15E9CC0276B5880009DFCF3 /* EnemyA.cpp in Sources */,
+				E15E9CBC276B5880009DFCF3 /* Setting.cpp in Sources */,
+				E15E9CBD276B5880009DFCF3 /* Over.cpp in Sources */,
+				E15E9CC2276B5880009DFCF3 /* EnemyB.cpp in Sources */,
+				E15E9CB9276B5880009DFCF3 /* BulletTemplate.cpp in Sources */,
+				E15E9CBF276B5880009DFCF3 /* Stage.cpp in Sources */,
+				E15E9CC1276B5880009DFCF3 /* EnemyTemplate.cpp in Sources */,
+				E136AF75276F35260085901F /* EnemyC.cpp in Sources */,
+				E15E9CBA276B5880009DFCF3 /* bullet_norm.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +540,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C17787D1CE0A9D800BB8AD0 /* Build configuration list for PBXProject "empty" */ = {
+		2C17787D1CE0A9D800BB8AD0 /* Build configuration list for PBXProject "VirusBuster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C17787E1CE0A9D800BB8AD0 /* Debug */,

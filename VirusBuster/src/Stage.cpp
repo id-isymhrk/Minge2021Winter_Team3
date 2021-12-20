@@ -1,9 +1,11 @@
-﻿#include"SceneClass.hpp"
+#include"SceneClass.hpp"
 #include"ObjectClass.hpp"
 
 Stage::Stage(const InitData& init)
 	:IScene(init) {
 	enemies << (EnemyTemplate*)new EnemyA(RectF(100,100,50,70));
+    enemies << (EnemyTemplate*)new EnemyB(RectF(0,0,50,70));
+    enemies << (EnemyTemplate*)new EnemyC(RectF(0,0,50,70));
 }
 
 void Stage::update() {

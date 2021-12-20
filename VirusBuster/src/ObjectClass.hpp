@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include"Basic.hpp"
 
 class EnemyTemplate
@@ -40,6 +40,18 @@ public:
 	EnemyA(RectF body);
 	void move();
 	void draw();
+};
+class EnemyB : public EnemyTemplate {
+public:
+    EnemyB(RectF body);
+    void move();
+    void draw();
+};
+class EnemyC : public EnemyTemplate {
+public:
+    EnemyC(RectF body);
+    void move();
+    void draw();
 };
 
 class bullet_norm :public BulletTemplate {
