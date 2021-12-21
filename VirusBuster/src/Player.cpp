@@ -80,7 +80,20 @@ void Player::SelectBullet() {
 }
 
 BulletTemplate* Player::Shoot() {
-	return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
+
+	switch (BulletType)
+	{
+	case 1:
+		return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
+		break;
+	case 2:
+		shot_time += 1.0;
+		return (BulletTemplate*)new BulletSnipe(RectF(Arg::center(position), 10), angle);
+		break;
+	default:
+		return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
+		break;
+	}
 }
 
 bool Player::check_shotcool() {
