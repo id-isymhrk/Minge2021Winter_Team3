@@ -3,7 +3,7 @@
 BulletSnipe::BulletSnipe(RectF body, double p_angle) {
 	Body = body;
 	angle = p_angle; //- Math::Pi / 2;
-	reflectCount = 10;
+	reflectCount = 3;
 	damage = 10;
 }
 
