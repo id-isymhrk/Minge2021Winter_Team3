@@ -60,8 +60,16 @@ class bullet_norm :public BulletTemplate {
 private:
 public:
 	bullet_norm(RectF body, double p_angle);
-	void move();
-	void draw();
+	void move() override;
+	void draw() override;
+};
+
+class BulletSnipe :public BulletTemplate {
+private:
+public:
+	BulletSnipe(RectF body, double p_angle);
+	void move() override;
+	void draw() override;
 };
 
 class Player

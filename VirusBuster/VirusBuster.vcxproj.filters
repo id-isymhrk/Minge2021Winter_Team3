@@ -189,6 +189,9 @@
     <ClCompile Include="src\EnemyC.cpp">
       <Filter>Source Files\Enemies</Filter>
     </ClCompile>
+    <ClCompile Include="src\BulletSnipe.cpp">
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
