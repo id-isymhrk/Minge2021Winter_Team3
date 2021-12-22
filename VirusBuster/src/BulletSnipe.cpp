@@ -25,5 +25,5 @@ void BulletSnipe::move() {
 }
 
 void BulletSnipe::draw() {
-	Body.draw(Color(0, 98, 211));
+	Body.rounded(3).draw(Color(0, 98, 211));
 }
