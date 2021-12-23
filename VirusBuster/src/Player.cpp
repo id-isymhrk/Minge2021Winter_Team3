@@ -67,12 +67,12 @@ void Player::SelectBullet() {
 	if (Key4.down())
 		BulletType = 4;
 
-	if (KeyR.down() || KeyUp.down()) {
+	if (KeyR.down() or KeyUp.down()) {
 		BulletType++;
 		if (BulletType > max_type)
 			BulletType = 1;
 	}
-	if (KeyE.down() || KeyDown.down()) {
+	if (KeyE.down() or KeyDown.down()) {
 		BulletType--;
 		if (BulletType < 1)
 			BulletType = max_type;
@@ -89,6 +89,9 @@ BulletTemplate* Player::Shoot() {
 	case 2:
 		shot_time += 1.0;
 		return (BulletTemplate*)new BulletSnipe(RectF(Arg::center(position), 10), angle);
+		break;
+	case 3:
+		return (BulletTemplate*)new BulletReflect(RectF(Arg::center(position), 5), angle);
 		break;
 	default:
 		return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);

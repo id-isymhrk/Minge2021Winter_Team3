@@ -72,6 +72,14 @@ public:
 	void draw() override;
 };
 
+class BulletReflect :public BulletTemplate {
+private:
+public:
+	BulletReflect(RectF body, double p_angle);
+	void move() override;
+	void draw() override;
+};
+
 class Player
 {
 private:

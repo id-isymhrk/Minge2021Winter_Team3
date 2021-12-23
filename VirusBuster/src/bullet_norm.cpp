@@ -25,5 +25,5 @@ void bullet_norm::move() {
 }
 
 void bullet_norm::draw() {
-	Body.draw(Palette::Greenyellow);
+	Body.rounded(3).draw(Palette::Greenyellow);
 }

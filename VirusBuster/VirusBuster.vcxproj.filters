@@ -192,6 +192,9 @@
     <ClCompile Include="src\BulletSnipe.cpp">
       <Filter>Source Files\Bullets</Filter>
     </ClCompile>
+    <ClCompile Include="src\BulletReflect.cpp">
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
