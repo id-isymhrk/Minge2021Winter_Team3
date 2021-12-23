@@ -8,7 +8,7 @@ BulletReflect::BulletReflect(RectF body, double p_angle) {
 }
 
 void BulletReflect::move() {
-	static constexpr float speed = 4;
+	constexpr float speed = 4;
 
 	Body.x += speed * cos(angle);
 	Body.y += speed * sin(angle);
