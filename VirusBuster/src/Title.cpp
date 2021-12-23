@@ -1,11 +1,12 @@
-﻿#include"SceneClass.hpp"
+#include"SceneClass.hpp"
 
 Title::Title(const InitData& init)
 	:IScene(init)
 {
 	// テキストを画面にデバッグ出力 | Print a text
-	Print << U"Press the EnterKey";
+	//Print << U"Press the EnterKey";
 }
+
 
 void Title::update() {
     
@@ -33,20 +34,29 @@ void Title::update() {
 }
 
 void Title::draw() const {
-    const static Font fontTitle(90,U"/Users/aoi/togalite/Togalite-Bold.otf");
-    const static Font fontmenu(30,U"/Users/aoi/togalite/Togalite-Bold.otf");
-    const static Font
-        select(25,U"/Users/aoi/togalite/Togalite-Bold.otf");
+    const static Texture texture(U"image/backgroundKekkan.png");
+    const static FontAsset titleFont(U"Title");
+    const static FontAsset textFont(U"Text");
+    const static FontAsset textFont2(U"Text2");
+    const static FontAsset selectFont(U"Select");
+    texture.resized(Scene::Size()).draw(0, 0);
     
-	fontTitle(U"VirusBuster").drawAt(400,100, Palette::Black);
-    fontmenu(U"start").drawAt(400,320,Palette::Black);
-    fontmenu(U"setting").drawAt(400,390,Palette::Black);
-    fontmenu(U"finish").drawAt(400,460,Palette::Black);
+    textFont2(U"Press the EnterKey").drawAt(60, 20, Palette::Black);
     
-	// マウスカーソルに追随する半透明な円を描く
-	//Circle{ Cursor::Pos(), 40 }.draw(ColorF{ 1, 0, 0, 0.5 });
+    titleFont(U"VirusBuster").drawAt(200, 100, Palette::Black);
+    titleFont(U"VirusBuster").drawAt(202, 102, Palette::Blue);
     
-    select(U">>").drawAt(320,320+70*state,Palette::Black);
+    textFont(U"start").drawAt(200, 320, Palette::Black);
+    textFont(U"start").drawAt(202, 322, Palette::Blue);
+    
+    textFont(U"setting").drawAt(200, 390, Palette::Black);
+    textFont(U"setting").drawAt(202, 392, Palette::Blue);
+    
+    textFont(U"finish").drawAt(200, 460, Palette::Black);
+    textFont(U"finish").drawAt(202, 462, Palette::Blue);
+    
+    selectFont(U">>").drawAt(100,320+70*state, Palette::Orange);
+    selectFont(U">>").drawAt(102,322+70*state, Palette::Black);
     
 }
 
