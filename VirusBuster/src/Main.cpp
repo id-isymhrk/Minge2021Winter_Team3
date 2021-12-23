@@ -1,18 +1,23 @@
-﻿#include"SceneClass.hpp"
+#include"SceneClass.hpp"
 
 void Main()
 {
 
 	App manager;
 	manager
-		//.add<Title>(State::Title)
+		.add<Title>(State::Title)
 		//.add<Setting>(State::Setting)
 		.add<Stage>(State::Stage);
 
+    Window::Resize(420,700);
+    Scene::Resize(420,700);
 	// 背景の色を設定 | Set background color
 	//Scene::SetBackground(ColorF{ 0.8, 0.9, 1.0 });
 	Scene::SetBackground(Palette::Black);
-
+    FontAsset::Register(U"Title", 60, U"font/Togalite-Bold.otf");
+    FontAsset::Register(U"Text", 40, U"font/Togalite-Bold.otf");
+    FontAsset::Register(U"Text2", 12, U"font/Togalite-Bold.otf");
+    FontAsset::Register(U"Select", 25, U"font/Togalite-Bold.otf");
 	while (System::Update())
 	{
 		if (!manager.update()) {
