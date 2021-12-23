@@ -16,3 +16,8 @@ void EnemyC::draw() {
     Body.draw(Palette::Red);
 }
 
+void EnemyC::damaged(int atk) {
+    HP -= atk;
+    Body.w -= 4;
+    Body.h -= 4;
+}
