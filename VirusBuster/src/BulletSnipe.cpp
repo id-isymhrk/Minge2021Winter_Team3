@@ -1,14 +1,14 @@
 ﻿#include"ObjectClass.hpp"
 
-bullet_norm::bullet_norm(RectF body, double p_angle) {
+BulletSnipe::BulletSnipe(RectF body, double p_angle) {
 	Body = body;
 	angle = p_angle; //- Math::Pi / 2;
 	reflectCount = 3;
-	damage = 3;
+	damage = 10;
 }
 
-void bullet_norm::move() {
-	static constexpr float speed = 4;
+void BulletSnipe::move() {
+	static constexpr float speed = 10;
 
 	Body.x += speed * cos(angle);
 	Body.y += speed * sin(angle);
@@ -16,7 +16,7 @@ void bullet_norm::move() {
 	//y軸で反射しないのでここではinside()は使いません
 	if (0 >= Body.x || Body.x >= Scene::Width()) {
 		reflectCount--;
-		angle=Vec2(sin(angle), cos(angle)).getAngle();
+		angle = Vec2(sin(angle), cos(angle)).getAngle();
 	}
 	/*if (0 >= Body.y || Body.y >= Scene::Height()) {
 		reflectCount--;
@@ -24,6 +24,6 @@ void bullet_norm::move() {
 	}*/
 }
 
-void bullet_norm::draw() {
-	Body.draw(Palette::Greenyellow);
+void BulletSnipe::draw() {
+	Body.draw(Color(0, 98, 211));
 }

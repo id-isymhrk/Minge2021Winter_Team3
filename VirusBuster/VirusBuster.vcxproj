@@ -113,6 +113,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\BulletSnipe.cpp" />
     <ClCompile Include="src\BulletTemplate.cpp" />
     <ClCompile Include="src\bullet_norm.cpp" />
     <ClCompile Include="src\Clear.cpp" />
