@@ -95,6 +95,17 @@ public:
 	void draw() override;
 };
 
+
+class PhaseTemplate {
+private:
+	Array<EnemyTemplate*> enemyWaitingList;
+public:
+	PhaseTemplate();
+	~PhaseTemplate();
+	virtual void addEnemies(Array<EnemyTemplate*>&);
+	bool isNextPhase(Array<EnemyTemplate*>);
+};
+
 class BulletHeavy :public BulletTemplate {
 private:
 public:
@@ -114,7 +125,11 @@ private:
 	int BulletType;
 
 	double shot_cool;
+<<<<<<< HEAD
+
+=======
 	
+>>>>>>> af4e812a44475f811d501cee2612db77717c0aa4
 	void rotate();
 	void SelectBullet();
 	BulletTemplate* Shoot();

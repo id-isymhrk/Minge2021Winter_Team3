@@ -3,11 +3,9 @@
 
 Stage::Stage(const InitData& init)
 	:IScene(init) {
+	phases << (PhaseTemplate*)new PhaseTemplate();
+	phases << (PhaseTemplate*)new PhaseTemplate();
 	HP = 30;
-	enemies << (EnemyTemplate*)new EnemyA(RectF(100,100,50,70));
-    enemies << (EnemyTemplate*)new EnemyB(RectF(0,0,50,70));
-    enemies << (EnemyTemplate*)new EnemyC(RectF(0,0,50,70));
-	enemies << (EnemyTemplate*)new StrongEnemyA(RectF(Scene::Width() / 2 - 50,0,100,100));
 }
 
 void Stage::update() {
@@ -27,11 +25,28 @@ void Stage::update() {
 			HP -= e->offensivePower;
 			if (HP <= 0) {
 				changeScene(State::Over);
+<<<<<<< HEAD
+	}
+		}
+	}
+=======
 			}
 		}
 	}
+>>>>>>> af4e812a44475f811d501cee2612db77717c0aa4
 
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
+	
+	//Phase処理
+	phases[0]->addEnemies(enemies);
+	if (phases[0]->isNextPhase(enemies)) {
+		Print << U"NextPhase";
+		phases.pop_front();
+		if (phases.isEmpty()) {
+			changeScene(State::Title);
+		}
+	}
+	
 	//デバッグ用
 	debug();
 }

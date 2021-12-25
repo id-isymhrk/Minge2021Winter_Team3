@@ -28,6 +28,7 @@ public:
 class Stage :public App::Scene {
 private:
 	Player player;
+	Array<PhaseTemplate*> phases;
 	Array<EnemyTemplate*> enemies;
 	Array<BulletTemplate*> bullets;
 	int HP;
