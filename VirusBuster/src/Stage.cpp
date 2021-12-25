@@ -3,6 +3,7 @@
 
 Stage::Stage(const InitData& init)
 	:IScene(init) {
+	HP = 30;
 	enemies << (EnemyTemplate*)new EnemyA(RectF(100,100,50,70));
     enemies << (EnemyTemplate*)new EnemyB(RectF(0,0,50,70));
     enemies << (EnemyTemplate*)new EnemyC(RectF(0,0,50,70));
@@ -16,12 +17,19 @@ void Stage::update() {
 	for (BulletTemplate* b : bullets) {
 		b->update();
 	}
+	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
 
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->update();
+		if (e->arrived()) {
+			HP -= e->offensivePower;
+			if (HP <= 0) {
+				changeScene(State::Over);
+			}
+		}
 	}
-	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
+
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 	//デバッグ用
 	debug();
@@ -43,6 +51,7 @@ void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
 	Print << Scene::Time();
+	Print << HP;
 	player.debug();
 }
 

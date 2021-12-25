@@ -5,11 +5,12 @@ class EnemyTemplate
 {
 protected:
 	int HP;
-	int damage;
 	bool removeFlag = false;
 
 public:
 	RectF Body;
+	int offensivePower = 10;
+
 	EnemyTemplate();
 	~EnemyTemplate();
 
@@ -31,6 +32,7 @@ protected:
 	int damage;
 
 public:
+
 	BulletTemplate();
 	~BulletTemplate();
 
