@@ -126,6 +126,7 @@ private:
 	int BulletType;
 
 	double shot_cool;
+
 	void rotate();
 	void SelectBullet();
 	BulletTemplate* Shoot();

@@ -3,6 +3,7 @@
 Title::Title(const InitData& init)
 	:IScene(init)
 {
+    ReadFile(getData());
 	// テキストを画面にデバッグ出力 | Print a text
 	//Print << U"Press the EnterKey";
 }

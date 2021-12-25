@@ -24,14 +24,15 @@ void Stage::update() {
 		if (e->arrived()) {
 			HP -= e->offensivePower;
 			if (HP <= 0) {
-				//changeScene(State::Over);
+				SaveFile(getData());
+				changeScene(State::Over);
 			}
 		}
 		if (e->death()) {
-			//getData().Score += e->money;
+			getData().Score += e->money;
 		}
 	}
-	enemies.removed_if([](EnemyTemplate* e) {return e->remove(); });
+	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 
 	//Phase処理
 	phases[0]->addEnemies(enemies);
@@ -39,7 +40,7 @@ void Stage::update() {
 		Print << U"NextPhase";
 		phases.pop_front();
 		if (phases.isEmpty()) {
-			//changeScene(State::Title);
+			changeScene(State::Title);
 		}
 	}
 	
@@ -71,9 +72,6 @@ void Stage::debug() {
 			Print << U"enemy_remove_true";
 	}
 
-	if (Scene::Time() >= 60) {
-		SaveFile(getData());
-	}
 }
 
 bool is_inside(RectF body, double x1, double y1, double x2, double y2) {
