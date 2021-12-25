@@ -195,6 +195,9 @@
     <ClCompile Include="src\BulletReflect.cpp">
       <Filter>Source Files\Bullets</Filter>
     </ClCompile>
+    <ClCompile Include="src\StrongEnemyA.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
