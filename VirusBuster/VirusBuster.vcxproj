@@ -113,6 +113,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\BulletHeavy.cpp" />
     <ClCompile Include="src\BulletReflect.cpp" />
     <ClCompile Include="src\BulletSnipe.cpp" />
     <ClCompile Include="src\BulletTemplate.cpp" />
@@ -127,6 +128,7 @@
     <ClCompile Include="src\PhaseTemplate.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Stage.cpp" />
+    <ClCompile Include="src\StrongEnemyA.cpp" />
     <ClCompile Include="src\Title.cpp" />
     <ClCompile Include="src\Setting.cpp" />
     <ClCompile Include="stdafx.cpp">

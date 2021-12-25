@@ -24,7 +24,7 @@ bool BulletTemplate::remove(Array<EnemyTemplate*> enemies) {
 	static constexpr double expand_rm_area = 10;	//削除しない範囲を拡大させるための変数
 	bool is_removed = false;
 
-	if (!is_inside(Body, -expand_rm_area, -expand_rm_area, Scene::Width() + expand_rm_area, Scene::Height() + expand_rm_area)) {
+	if (not is_inside(Body, -expand_rm_area, -expand_rm_area, Scene::Width() + expand_rm_area, Scene::Height() + expand_rm_area)) {
 		is_removed = true;
 	}
 	else if (reflectCount <= 0) {
