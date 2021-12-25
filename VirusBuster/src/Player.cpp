@@ -19,7 +19,7 @@ void Player::update(Array<BulletTemplate*>& bullets) {
 	rotate();
 	SelectBullet();
 
-	if (KeySpace.pressed() && check_shotcool()) {
+	if (KeySpace.pressed() and check_shotcool()) {
 		bullets << Shoot();
 	}
 }
