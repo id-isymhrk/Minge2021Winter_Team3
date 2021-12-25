@@ -84,6 +84,14 @@ public:
 	void draw() override;
 };
 
+class BulletHeavy :public BulletTemplate {
+private:
+public:
+	BulletHeavy(RectF body, double p_angle);
+	void move() override;
+	void draw() override;
+};
+
 class Player
 {
 private:
@@ -94,8 +102,8 @@ private:
 
 	int BulletType;
 
-	double shot_time;
-
+	double shot_cool;
+	
 	void rotate();
 	void SelectBullet();
 	BulletTemplate* Shoot();
