@@ -1,7 +1,7 @@
-#include"ObjectClass.hpp"
+﻿#include"ObjectClass.hpp"
 
 EnemyB::EnemyB(RectF body) {
-	HP = 50;
+	HP = 10;
 	Body = body;
 }
 

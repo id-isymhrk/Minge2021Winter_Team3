@@ -1,4 +1,4 @@
-#include"ObjectClass.hpp"
+﻿#include"ObjectClass.hpp"
 
 PhaseTemplate::PhaseTemplate() {
 	enemyWaitingList << (EnemyTemplate*)new EnemyA(RectF(100, 100, 50, 70));
@@ -16,6 +16,7 @@ void PhaseTemplate::addEnemies(Array<EnemyTemplate*>& enemies) {
 		popCool = Random<double>(0.0, 4.0);
 		enemies << enemyWaitingList[0];
 		enemyWaitingList.pop_front();
+
 	}
 }
 bool PhaseTemplate::isNextPhase(Array<EnemyTemplate*> enemies) {

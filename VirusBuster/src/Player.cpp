@@ -111,5 +111,5 @@ bool Player::check_shotcool() {
 
 void Player::debug() {
 	Print << BulletType;
-	Print << angle;
+	//Print << angle;
 }

@@ -1,4 +1,4 @@
-#include"SceneClass.hpp"
+﻿#include"SceneClass.hpp"
 
 void Main()
 {
@@ -27,6 +27,27 @@ void Main()
 			break;
 		}
 	}
+}
+
+void SaveFile(GameData& gamedata) {
+	BinaryWriter scoreWriter{ U"ScoreFile.bin" };
+
+	if (not scoreWriter) {
+		throw Error(U"ScoreFile.bin が開けません");
+	}
+
+	scoreWriter.write(gamedata.HighScore);
+	gamedata.NewScore = 0;
+}
+
+void ReadFile(GameData& gamedata) {
+	BinaryReader scoreReader{ U"ScoreFile.bin" };
+
+	if (not scoreReader) {
+		gamedata.HighScore = 0;
+	}
+
+	scoreReader.read(gamedata.HighScore);
 }
 
 //

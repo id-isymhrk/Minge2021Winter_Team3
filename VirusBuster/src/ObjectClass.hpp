@@ -9,6 +9,7 @@ protected:
 
 public:
 	RectF Body;
+	int money = 10;
 	int offensivePower = 10;
 
 	EnemyTemplate();
