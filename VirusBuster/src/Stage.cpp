@@ -25,18 +25,9 @@ void Stage::update() {
 			HP -= e->offensivePower;
 			if (HP <= 0) {
 				changeScene(State::Over);
-<<<<<<< HEAD
-	}
-		}
-	}
-=======
 			}
 		}
 	}
->>>>>>> af4e812a44475f811d501cee2612db77717c0aa4
-
-	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
-	
 	//Phase処理
 	phases[0]->addEnemies(enemies);
 	if (phases[0]->isNextPhase(enemies)) {
