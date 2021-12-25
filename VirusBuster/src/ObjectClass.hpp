@@ -6,7 +6,7 @@ class EnemyTemplate
 protected:
 	int HP;
 	int damage;
-	bool remove_flag = false;
+	bool removeFlag = false;
 
 public:
 	RectF Body;
