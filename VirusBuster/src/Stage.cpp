@@ -21,10 +21,13 @@ void Stage::update() {
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->update();
+		if (e->arrived()) {
+			HP -= e->offensivePower;
+			if (HP <= 0) {
+				changeScene(State::Over);
+			}
+		}
 	}
-	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
-	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
-	
 	//Phase処理
 	phases[0]->addEnemies(enemies);
 	if (phases[0]->isNextPhase(enemies)) {

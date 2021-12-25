@@ -21,16 +21,32 @@ void Main()
     FontAsset::Register(U"Text2", 12, U"font/Togalite-Bold.otf");
     FontAsset::Register(U"Select", 25, U"font/Togalite-Bold.otf");
 
-	if (not score) {
-		throw Error{ U"Failed to open 'ScoreFile.bin'" };
-	}
-
 	while (System::Update())
 	{
 		if (not manager.update()) {
 			break;
 		}
 	}
+}
+
+void SaveFile(GameData& gamedata) {
+	BinaryWriter scoreWriter{ U"ScoreFile.bin" };
+
+	if (not scoreWriter) {
+		throw Error(U"ScoreFile.bin が開けません");
+	}
+
+	scoreWriter.write(gamedata.Score);
+}
+
+void ReadFile(GameData& gamedata) {
+	BinaryReader scoreReader{ U"ScoreFile.bin" };
+
+	if (not scoreReader) {
+		gamedata.Score = 0;
+	}
+
+	scoreReader.read(gamedata.Score);
 }
 
 //
