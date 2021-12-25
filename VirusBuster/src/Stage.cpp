@@ -28,6 +28,8 @@ void Stage::update() {
 			}
 		}
 	}
+	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
+
 	//Phase処理
 	phases[0]->addEnemies(enemies);
 	if (phases[0]->isNextPhase(enemies)) {
