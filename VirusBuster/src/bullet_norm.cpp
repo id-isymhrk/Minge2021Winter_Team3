@@ -14,11 +14,11 @@ void bullet_norm::move() {
 	Body.y += speed * sin(angle);
 
 	//y軸で反射しないのでここではinside()は使いません
-	if (0 >= Body.x || Body.x >= Scene::Width()) {
+	if (0 >= Body.x or Body.x >= Scene::Width()) {
 		reflectCount--;
 		angle=Vec2(sin(angle), cos(angle)).getAngle();
 	}
-	/*if (0 >= Body.y || Body.y >= Scene::Height()) {
+	/*if (0 >= Body.y or Body.y >= Scene::Height()) {
 		reflectCount--;
 		angle = Vec2(-sin(angle), -cos(angle)).getAngle();
 	}*/
