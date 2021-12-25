@@ -10,6 +10,8 @@ protected:
 
 public:
 	RectF Body;
+	int offensivePower = 10;
+
 	EnemyTemplate();
 	~EnemyTemplate();
 
@@ -31,6 +33,7 @@ protected:
 	int damage;
 
 public:
+
 	BulletTemplate();
 	~BulletTemplate();
 

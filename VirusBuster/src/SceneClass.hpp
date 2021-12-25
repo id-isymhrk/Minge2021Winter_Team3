@@ -30,6 +30,7 @@ private:
 	Player player;
 	Array<EnemyTemplate*> enemies;
 	Array<BulletTemplate*> bullets;
+	int HP;
 
 public:
 	Stage(const InitData& init);
