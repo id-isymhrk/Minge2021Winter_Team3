@@ -1,21 +1,21 @@
 #include"ObjectClass.hpp"
 
-StrongEnemyA::StrongEnemyA(RectF body) {
+SpecialEnemyA::SpecialEnemyA(RectF body) {
     HP = 100;
     Body = body;
 }
 
-void StrongEnemyA::move() {
+void SpecialEnemyA::move() {
     static double speed = 0.2;
 
     Body.y += speed;
    
 }
 
-void StrongEnemyA::draw() {
+void SpecialEnemyA::draw() {
     Body.draw(Palette::Red);
 }
 
-void StrongEnemyA::damaged(int atk) {
+void SpecialEnemyA::damaged(int atk) {
     HP -= atk;
 }
