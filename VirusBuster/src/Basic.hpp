@@ -5,6 +5,8 @@ enum class State {
 	Title,
 	Setting,
 	Stage,
+	Clear,
+	Over
 };
 
 struct GameData {

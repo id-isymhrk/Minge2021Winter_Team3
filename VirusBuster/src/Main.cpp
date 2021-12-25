@@ -6,8 +6,10 @@ void Main()
 	App manager;
 	manager
 		.add<Title>(State::Title)
-		//.add<Setting>(State::Setting)
-		.add<Stage>(State::Stage);
+		.add<Setting>(State::Setting)
+		.add<Stage>(State::Stage)
+		.add<Clear>(State::Clear)
+		.add<Over>(State::Over);
 
     Window::Resize(420,700);
     Scene::Resize(420,700);
@@ -25,7 +27,7 @@ void Main()
 
 	while (System::Update())
 	{
-		if (!manager.update()) {
+		if (not manager.update()) {
 			break;
 		}
 	}

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Basic.hpp"
 #include "ObjectClass.hpp"
 
@@ -28,8 +28,10 @@ public:
 class Stage :public App::Scene {
 private:
 	Player player;
+	Array<PhaseTemplate*> phases;
 	Array<EnemyTemplate*> enemies;
 	Array<BulletTemplate*> bullets;
+	int HP;
 
 public:
 	Stage(const InitData& init);

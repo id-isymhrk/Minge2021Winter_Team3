@@ -3,9 +3,9 @@
 
 Stage::Stage(const InitData& init)
 	:IScene(init) {
-	enemies << (EnemyTemplate*)new EnemyA(RectF(100,100,50,70));
-    enemies << (EnemyTemplate*)new EnemyB(RectF(0,0,50,70));
-    enemies << (EnemyTemplate*)new EnemyC(RectF(0,0,50,70));
+	phases << (PhaseTemplate*)new PhaseTemplate();
+	phases << (PhaseTemplate*)new PhaseTemplate();
+	HP = 30;
 }
 
 void Stage::update() {
@@ -16,17 +16,25 @@ void Stage::update() {
 	for (BulletTemplate* b : bullets) {
 		b->update();
 	}
+	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
 
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->update();
-
-		if (e->death()) {
-			getData().Score += e->money;
-		}
 	}
 	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
+	
+	//Phase処理
+	phases[0]->addEnemies(enemies);
+	if (phases[0]->isNextPhase(enemies)) {
+		Print << U"NextPhase";
+		phases.pop_front();
+		if (phases.isEmpty()) {
+			changeScene(State::Title);
+		}
+	}
+	
 	//デバッグ用
 	debug();
 }
@@ -48,6 +56,7 @@ void Stage::debug() {
 	Print << U"ここはゲーム本編";
 	Print << getData().Score;
 	Print << Scene::Time();
+	Print << HP;
 	player.debug();
 
 	if (Scene::Time() >= 60) {

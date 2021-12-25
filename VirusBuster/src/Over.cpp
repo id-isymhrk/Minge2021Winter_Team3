@@ -1,4 +1,4 @@
-#include"SceneClass.hpp"
+﻿#include"SceneClass.hpp"
 
 Over::Over(const InitData& init)
 	:IScene(init) {
@@ -17,4 +17,7 @@ void Over::draw() const {
 void Over::debug() {
 	ClearPrint();
 	Print << U"ここはゲームオーバー画面";
+	if (KeyEnter.pressed()) {
+		changeScene(State::Title);
+	}
 }

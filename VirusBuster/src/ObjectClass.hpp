@@ -5,12 +5,12 @@ class EnemyTemplate
 {
 protected:
 	int HP;
-	int damage;
 	bool removeFlag = false;
 
 public:
 	RectF Body;
 	int money = 10;
+	int offensivePower = 10;
 
 	EnemyTemplate();
 	~EnemyTemplate();
@@ -33,6 +33,7 @@ protected:
 	int damage;
 
 public:
+
 	BulletTemplate();
 	~BulletTemplate();
 
@@ -54,12 +55,21 @@ public:
     void move();
     void draw();
 };
+
 class EnemyC : public EnemyTemplate {
 public:
     EnemyC(RectF body);
     void move()override;
     void draw()override;
     void damaged(int B_damage)override;
+};
+
+class StrongEnemyA : public EnemyTemplate {
+public:
+	StrongEnemyA(RectF body);
+	void move()override;
+	void draw()override;
+	void damaged(int B_damage)override;
 };
 
 class bullet_norm :public BulletTemplate {
@@ -86,6 +96,25 @@ public:
 	void draw() override;
 };
 
+
+class PhaseTemplate {
+private:
+	Array<EnemyTemplate*> enemyWaitingList;
+public:
+	PhaseTemplate();
+	~PhaseTemplate();
+	virtual void addEnemies(Array<EnemyTemplate*>&);
+	bool isNextPhase(Array<EnemyTemplate*>);
+};
+
+class BulletHeavy :public BulletTemplate {
+private:
+public:
+	BulletHeavy(RectF body, double p_angle);
+	void move() override;
+	void draw() override;
+};
+
 class Player
 {
 private:
@@ -96,8 +125,7 @@ private:
 
 	int BulletType;
 
-	double shot_time;
-
+	double shot_cool;
 	void rotate();
 	void SelectBullet();
 	BulletTemplate* Shoot();
