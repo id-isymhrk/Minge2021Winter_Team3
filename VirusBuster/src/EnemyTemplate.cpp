@@ -26,6 +26,7 @@ void EnemyTemplate::damaged(int atk) {
 bool EnemyTemplate::death() {
 	if (HP <= 0) {
 		remove_flag = true;
+		return true;
 	}
 
 	return remove_flag;
