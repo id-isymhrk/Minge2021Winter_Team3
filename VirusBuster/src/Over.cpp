@@ -11,6 +11,8 @@ void Over::update() {
 }
 
 void Over::draw() const {
+	const static FontAsset titleFont(U"Title");
+	titleFont(U"Game Clear");
 
 }
 
