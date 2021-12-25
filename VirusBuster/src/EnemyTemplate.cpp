@@ -38,5 +38,5 @@ bool EnemyTemplate::arrived() {
 		return true;
 	}
 
-	return remove_flag;
+	return false;
 }
