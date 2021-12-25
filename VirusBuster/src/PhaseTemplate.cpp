@@ -19,7 +19,7 @@ void PhaseTemplate::addEnemies(Array<EnemyTemplate*>& enemies) {
 	}
 }
 bool PhaseTemplate::isNextPhase(Array<EnemyTemplate*> enemies) {
-	if (enemyWaitingList.isEmpty() && enemies.isEmpty()) {
+	if (enemyWaitingList.isEmpty() and enemies.isEmpty()) {
 		return true;
 	}
 	return false;
