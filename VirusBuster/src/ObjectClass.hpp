@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include"Basic.hpp"
 
 class EnemyTemplate
@@ -6,6 +6,7 @@ class EnemyTemplate
 protected:
 	int HP;
 	int damage;
+	bool removeFlag = false;
 
 public:
 	RectF Body;
@@ -17,6 +18,8 @@ public:
 	virtual void move();
 	virtual void damaged(int B_damage);
 	bool remove();
+	bool death();
+	bool arrived();
 };
 
 class BulletTemplate
