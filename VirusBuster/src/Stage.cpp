@@ -36,7 +36,7 @@ void Stage::update() {
 		Print << U"NextPhase";
 		phases.pop_front();
 		if (phases.isEmpty()) {
-			changeScene(State::Title);
+			changeScene(State::Clear);
 		}
 	}
 	
