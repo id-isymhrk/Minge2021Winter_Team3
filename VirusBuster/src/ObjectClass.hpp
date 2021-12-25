@@ -5,7 +5,6 @@ class EnemyTemplate
 {
 protected:
 	int HP;
-	int damage;
 	bool removeFlag = false;
 
 public:
