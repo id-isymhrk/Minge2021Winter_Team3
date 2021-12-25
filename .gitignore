@@ -3,8 +3,8 @@
 # https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 #Original materials
-VirusBuster/App/font/
-VirusBuster/App/image/
+VirusBuster/App/font/*
+VirusBuster/App/image/*
 
 # User-specific files
 *.rsuser
