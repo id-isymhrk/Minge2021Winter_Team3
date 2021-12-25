@@ -198,7 +198,7 @@
     <ClCompile Include="src\PhaseTemplate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\StrongEnemyA.cpp">
+    <ClCompile Include="src\SpecialEnemyA.cpp">
       <Filter>Source Files\Enemies</Filter>
     </ClCompile>
     <ClCompile Include="src\BulletHeavy.cpp">

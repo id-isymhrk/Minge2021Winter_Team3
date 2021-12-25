@@ -128,7 +128,7 @@
     <ClCompile Include="src\PhaseTemplate.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Stage.cpp" />
-    <ClCompile Include="src\StrongEnemyA.cpp" />
+    <ClCompile Include="src\SpecialEnemyA.cpp" />
     <ClCompile Include="src\Title.cpp" />
     <ClCompile Include="src\Setting.cpp" />
     <ClCompile Include="stdafx.cpp">
