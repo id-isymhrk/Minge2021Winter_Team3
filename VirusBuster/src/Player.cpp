@@ -8,7 +8,7 @@ Player::Player() {
 
 	BulletType = 1;
 
-	shot_time = 0;
+	shot_cool = 0.2;
 }
 
 Player::~Player() {
@@ -81,26 +81,25 @@ void Player::SelectBullet() {
 
 BulletTemplate* Player::Shoot() {
 
-	switch (BulletType)
-	{
+	shot_cool = 0.2;
+	switch (BulletType){
 	case 1:
 		return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
-		break;
 	case 2:
-		shot_time += 1.0;
+		shot_cool = 1.2;
 		return (BulletTemplate*)new BulletSnipe(RectF(Arg::center(position), 10), angle);
-		break;
 	case 3:
 		return (BulletTemplate*)new BulletReflect(RectF(Arg::center(position), 5), angle);
-		break;
+	case 4:
+		shot_cool = 0.8;
+		return (BulletTemplate*)new BulletHeavy(RectF(Arg::center(position), 5), angle);
 	default:
 		return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
-		break;
 	}
 }
 
 bool Player::check_shotcool() {
-	static constexpr double shot_cool = 0.2;
+	static double shot_time = 0.0;
 
 	if ((Scene::Time() - shot_time) > shot_cool) {
 		shot_time = Scene::Time();
