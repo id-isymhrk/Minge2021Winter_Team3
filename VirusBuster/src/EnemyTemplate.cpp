@@ -29,7 +29,7 @@ bool EnemyTemplate::death() {
 		return true;
 	}
 
-	return remove_flag;
+	return false;
 }
 
 bool EnemyTemplate::arrived() {
