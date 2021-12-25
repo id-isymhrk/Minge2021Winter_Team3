@@ -72,9 +72,6 @@ void Title::debug() {
         Print << Sample({ U"Hello!", U"こんにちは", U"你好", U"안녕하세요?" });
     }
 
-    if (KeyEnter.down()) {
-        changeScene(State::Stage);
-    }
     Print << U"HighScore:{}"_fmt(getData().HighScore);
     Print << U"NewScore:{}"_fmt(getData().NewScore);
 }
