@@ -24,12 +24,15 @@ void Stage::update() {
 		if (e->arrived()) {
 			HP -= e->offensivePower;
 			if (HP <= 0) {
+				if (getData().NewScore > getData().HighScore) {
+					getData().HighScore = getData().NewScore;
+				}
 				SaveFile(getData());
 				changeScene(State::Over);
 			}
 		}
 		if (e->death()) {
-			getData().Score += e->money;
+			getData().NewScore += e->money;
 		}
 	}
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
@@ -40,6 +43,10 @@ void Stage::update() {
 		Print << U"NextPhase";
 		phases.pop_front();
 		if (phases.isEmpty()) {
+			if (getData().NewScore > getData().HighScore) {
+				getData().HighScore = getData().NewScore;
+			}
+			SaveFile(getData());
 			changeScene(State::Title);
 		}
 	}
@@ -63,14 +70,12 @@ void Stage::draw() const {
 void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
-	Print << getData().Score;
+	Print << U"HighScore:{}"_fmt(getData().HighScore);
+	Print << U"NewScore:{}"_fmt(getData().NewScore);
 	//Print << Scene::Time();
 	Print << HP;
 	player.debug();
-	for (EnemyTemplate* e : enemies) {
-		if (e->remove())
-			Print << U"enemy_remove_true";
-	}
+	
 
 }
 

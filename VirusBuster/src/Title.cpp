@@ -4,6 +4,7 @@ Title::Title(const InitData& init)
 	:IScene(init)
 {
     ReadFile(getData());
+    getData().NewScore = 0;
 	// テキストを画面にデバッグ出力 | Print a text
 	//Print << U"Press the EnterKey";
 }
@@ -74,6 +75,6 @@ void Title::debug() {
     if (KeyEnter.down()) {
         changeScene(State::Stage);
     }
-
-    Print << getData().Score;
+    Print << U"HighScore:{}"_fmt(getData().HighScore);
+    Print << U"NewScore:{}"_fmt(getData().NewScore);
 }

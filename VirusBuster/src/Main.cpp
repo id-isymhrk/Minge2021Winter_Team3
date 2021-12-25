@@ -36,17 +36,18 @@ void SaveFile(GameData& gamedata) {
 		throw Error(U"ScoreFile.bin が開けません");
 	}
 
-	scoreWriter.write(gamedata.Score);
+	scoreWriter.write(gamedata.HighScore);
+	gamedata.NewScore = 0;
 }
 
 void ReadFile(GameData& gamedata) {
 	BinaryReader scoreReader{ U"ScoreFile.bin" };
 
 	if (not scoreReader) {
-		gamedata.Score = 0;
+		gamedata.HighScore = 0;
 	}
 
-	scoreReader.read(gamedata.Score);
+	scoreReader.read(gamedata.HighScore);
 }
 
 //

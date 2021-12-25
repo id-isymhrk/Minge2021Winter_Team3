@@ -10,7 +10,8 @@ enum class State {
 };
 
 struct GameData {
-	int Score = 0;
+	int HighScore = 0;
+	int NewScore = 0;
 };
 
 using App = SceneManager<State, GameData>;
