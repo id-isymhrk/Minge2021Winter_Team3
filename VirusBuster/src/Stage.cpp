@@ -5,6 +5,7 @@ Stage::Stage(const InitData& init)
 	:IScene(init) {
 	phases << (PhaseTemplate*)new PhaseTemplate();
 	phases << (PhaseTemplate*)new PhaseTemplate();
+	HP = 30;
 }
 
 void Stage::update() {
@@ -15,12 +16,19 @@ void Stage::update() {
 	for (BulletTemplate* b : bullets) {
 		b->update();
 	}
+	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
 
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->update();
+		if (e->arrived()) {
+			HP -= e->offensivePower;
+			if (HP <= 0) {
+				changeScene(State::Over);
 	}
-	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
+		}
+	}
+
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 	
 	//Phase処理
@@ -53,6 +61,7 @@ void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
 	Print << Scene::Time();
+	Print << HP;
 	player.debug();
 }
 

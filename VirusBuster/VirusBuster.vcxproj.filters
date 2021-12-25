@@ -198,6 +198,12 @@
     <ClCompile Include="src\PhaseTemplate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\StrongEnemyA.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BulletHeavy.cpp">
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
