@@ -16,7 +16,7 @@ void EnemyTemplate::move() {
 
 }
 bool EnemyTemplate::remove() {
-	return remove_flag;
+	return removeFlag;
 }
 
 void EnemyTemplate::damaged(int atk) {
@@ -25,7 +25,7 @@ void EnemyTemplate::damaged(int atk) {
 
 bool EnemyTemplate::death() {
 	if (HP <= 0) {
-		remove_flag = true;
+		removeFlag = true;
 		return true;
 	}
 
@@ -34,7 +34,7 @@ bool EnemyTemplate::death() {
 
 bool EnemyTemplate::arrived() {
 	if(Body.center().y >= Scene::Height()){
-		remove_flag = true;
+		removeFlag = true;
 		return true;
 	}
 
