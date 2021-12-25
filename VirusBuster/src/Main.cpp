@@ -20,6 +20,7 @@ void Main()
     FontAsset::Register(U"Text", 40, U"font/Togalite-Bold.otf");
     FontAsset::Register(U"Text2", 12, U"font/Togalite-Bold.otf");
     FontAsset::Register(U"Select", 25, U"font/Togalite-Bold.otf");
+	FontAsset::Register(U"Instruction", 20, U"font/Togalite-Bold.otf");
 	while (System::Update())
 	{
 		if (not manager.update()) {
