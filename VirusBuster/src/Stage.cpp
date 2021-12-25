@@ -7,6 +7,7 @@ Stage::Stage(const InitData& init)
 	enemies << (EnemyTemplate*)new EnemyA(RectF(100,100,50,70));
     enemies << (EnemyTemplate*)new EnemyB(RectF(0,0,50,70));
     enemies << (EnemyTemplate*)new EnemyC(RectF(0,0,50,70));
+	enemies << (EnemyTemplate*)new StrongEnemyA(RectF(Scene::Width() / 2 - 50,0,100,100));
 }
 
 void Stage::update() {

@@ -54,12 +54,21 @@ public:
     void move();
     void draw();
 };
+
 class EnemyC : public EnemyTemplate {
 public:
     EnemyC(RectF body);
     void move()override;
     void draw()override;
     void damaged(int B_damage)override;
+};
+
+class StrongEnemyA : public EnemyTemplate {
+public:
+	StrongEnemyA(RectF body);
+	void move()override;
+	void draw()override;
+	void damaged(int B_damage)override;
 };
 
 class bullet_norm :public BulletTemplate {
