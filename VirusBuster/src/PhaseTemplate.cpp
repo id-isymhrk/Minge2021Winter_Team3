@@ -16,6 +16,8 @@ void PhaseTemplate::addEnemies(Array<EnemyTemplate*>& enemies) {
 		popCool = Random<double>(0.0, 4.0);
 		enemies << enemyWaitingList[0];
 		enemyWaitingList.pop_front();
+
+		//Print << U"POP!!";
 	}
 }
 bool PhaseTemplate::isNextPhase(Array<EnemyTemplate*> enemies) {
