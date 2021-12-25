@@ -17,7 +17,6 @@ void PhaseTemplate::addEnemies(Array<EnemyTemplate*>& enemies) {
 		enemies << enemyWaitingList[0];
 		enemyWaitingList.pop_front();
 
-		//Print << U"POP!!";
 	}
 }
 bool PhaseTemplate::isNextPhase(Array<EnemyTemplate*> enemies) {
