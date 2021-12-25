@@ -84,6 +84,16 @@ public:
 	void draw() override;
 };
 
+class PhaseTemplate {
+private:
+	Array<EnemyTemplate*> enemyWaitingList;
+public:
+	PhaseTemplate();
+	~PhaseTemplate();
+	virtual void addEnemies(Array<EnemyTemplate*>&);
+	bool isNextPhase(Array<EnemyTemplate*>);
+};
+
 class Player
 {
 private:
