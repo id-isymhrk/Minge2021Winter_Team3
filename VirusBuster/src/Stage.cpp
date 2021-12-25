@@ -20,6 +20,10 @@ void Stage::update() {
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
 		e->update();
+
+		if (e->death()) {
+			getData().Score += e->money;
+		}
 	}
 	bullets.remove_if([&](BulletTemplate* b) {return b->remove(enemies); });
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
@@ -42,8 +46,13 @@ void Stage::draw() const {
 void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
+	Print << getData().Score;
 	Print << Scene::Time();
 	player.debug();
+
+	if (Scene::Time() >= 60) {
+		
+	}
 }
 
 bool is_inside(RectF body, double x1, double y1, double x2, double y2) {

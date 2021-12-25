@@ -10,6 +10,8 @@ protected:
 
 public:
 	RectF Body;
+	int money = 10;
+
 	EnemyTemplate();
 	~EnemyTemplate();
 

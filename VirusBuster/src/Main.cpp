@@ -1,4 +1,4 @@
-#include"SceneClass.hpp"
+﻿#include"SceneClass.hpp"
 
 void Main()
 {
@@ -18,6 +18,11 @@ void Main()
     FontAsset::Register(U"Text", 40, U"font/Togalite-Bold.otf");
     FontAsset::Register(U"Text2", 12, U"font/Togalite-Bold.otf");
     FontAsset::Register(U"Select", 25, U"font/Togalite-Bold.otf");
+
+	if (not score) {
+		throw Error{ U"Failed to open 'ScoreFile.bin'" };
+	}
+
 	while (System::Update())
 	{
 		if (!manager.update()) {
