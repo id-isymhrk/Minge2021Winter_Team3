@@ -35,6 +35,7 @@ bool EnemyTemplate::death() {
 bool EnemyTemplate::arrived() {
 	if(Body.center().y >= Scene::Height()){
 		remove_flag = true;
+		return true;
 	}
 
 	return remove_flag;
