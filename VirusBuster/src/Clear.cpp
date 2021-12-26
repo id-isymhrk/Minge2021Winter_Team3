@@ -6,6 +6,8 @@ Clear::Clear(const InitData& init):IScene(init) {
 }
 
 void Clear::update() {
+
+	//SaveFile(getData());
 	if (KeyEnter.pressed()) {
 		changeScene(State::Title);
 	}
@@ -14,8 +16,8 @@ void Clear::update() {
 }
 
 void Clear::draw() const {
-	static const int newScore = getData().NewScore;
-	static const int highScore=getData().HighScore;
+	const int newScore = getData().NewScore;
+	const int highScore=getData().HighScore;
 	const static FontAsset titleFont(U"Title");
 	const static FontAsset textFont(U"Instruction");
 	titleFont(U"Game Clear").drawAt(Scene::Width() / 2 + 4, Scene::Height() / 2 - 70 + 4, Palette::Gray);
