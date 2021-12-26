@@ -6,13 +6,16 @@ Over::Over(const InitData& init)
 }
 
 void Over::update() {
+
+	SaveFile(getData());
+
 	//デバッグ用
 	debug();
 }
 
 void Over::draw() const {
-	static const int newScore = getData().NewScore;
-	static const int highScore = getData().HighScore;
+	const int newScore = getData().NewScore;
+	const int highScore = getData().HighScore;
 	const static FontAsset titleFont(U"Title");
 	const static FontAsset textFont(U"Instruction");
 	titleFont(U"Game Over").drawAt(Scene::Width()/2,Scene::Height()/2-70,Palette::White);

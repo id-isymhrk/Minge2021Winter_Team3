@@ -37,7 +37,6 @@ void SaveFile(GameData& gamedata) {
 	}
 
 	scoreWriter.write(gamedata.HighScore);
-	gamedata.NewScore = 0;
 }
 
 void ReadFile(GameData& gamedata) {
@@ -47,6 +46,7 @@ void ReadFile(GameData& gamedata) {
 		gamedata.HighScore = 0;
 	}
 
+	gamedata.NewScore = 0;
 	scoreReader.read(gamedata.HighScore);
 }
 

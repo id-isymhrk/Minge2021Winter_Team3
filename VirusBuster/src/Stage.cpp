@@ -28,7 +28,6 @@ void Stage::update() {
 				if (getData().NewScore > getData().HighScore) {
 					getData().HighScore = getData().NewScore;
 				}
-				SaveFile(getData());
 				changeScene(State::Over);
 			}
 		}
@@ -47,7 +46,6 @@ void Stage::update() {
 			if (getData().NewScore > getData().HighScore) {
 				getData().HighScore = getData().NewScore;
 			}
-			SaveFile(getData());
 			changeScene(State::Clear);
 		}
 	}
