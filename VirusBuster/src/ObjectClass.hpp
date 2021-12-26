@@ -109,23 +109,43 @@ public:
 	void draw() override;
 };
 
-
-class PhaseTemplate {
-private:
-	Array<EnemyTemplate*> enemyWaitingList;
-public:
-	PhaseTemplate();
-	~PhaseTemplate();
-	virtual void addEnemies(Array<EnemyTemplate*>&);
-	bool isNextPhase(Array<EnemyTemplate*>);
-};
-
 class BulletHeavy :public BulletTemplate {
 private:
 public:
 	BulletHeavy(RectF body, double p_angle);
 	void move() override;
 	void draw() override;
+};
+
+class PhaseTemplate {
+protected:
+	Array<EnemyTemplate*> enemyWaitingList;
+public:
+	PhaseTemplate();
+	~PhaseTemplate();
+	virtual void addEnemies(Array<EnemyTemplate*>&);
+	virtual bool isNextPhase(Array<EnemyTemplate*>);
+};
+
+class Phase1 :public PhaseTemplate {
+public:
+	Phase1();
+	~Phase1();
+	void addEnemies(Array<EnemyTemplate*>&);
+};
+
+class Phase2 :public PhaseTemplate {
+public:
+	Phase2();
+	~Phase2();
+	void addEnemies(Array<EnemyTemplate*>&);
+};
+
+class Phase3 :public PhaseTemplate {
+public:
+	Phase3();
+	~Phase3();
+	void addEnemies(Array<EnemyTemplate*>&);
 };
 
 class Player

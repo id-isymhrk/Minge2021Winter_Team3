@@ -32,7 +32,6 @@ private:
 	Array<EnemyTemplate*> enemies;
 	Array<BulletTemplate*> bullets;
 	int HP;
-
 public:
 	Stage(const InitData& init);
 	void update() override;
