@@ -15,7 +15,8 @@ void EnemyC::move() {
    
 }
 void EnemyC::draw() {
-    Body.draw(Palette::Red);
+    static const Texture texture(U"image/Enemy3.png");
+    texture.resized(Body.size).draw(Body.pos);
 }
 
 void EnemyC::damaged(int atk) {
