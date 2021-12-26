@@ -4,7 +4,9 @@ BulletHeavy::BulletHeavy(RectF body, double p_angle) {
 	Body = body;
 	angle = p_angle;
 	reflectCount = 3;
-	damage = 15;
+	damage = 1;
+
+	speed_rate = 0.75;
 }
 
 void BulletHeavy::move() {
@@ -25,5 +27,5 @@ void BulletHeavy::move() {
 }
 
 void BulletHeavy::draw() {
-	Body.rounded(3).draw(Color(0, 98, 211));
+	Body.rounded(5).draw(Color(122, 122, 134));
 }
