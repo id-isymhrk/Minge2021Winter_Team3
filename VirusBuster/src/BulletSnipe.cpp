@@ -3,12 +3,12 @@
 BulletSnipe::BulletSnipe(RectF body, double p_angle) {
 	Body = body;
 	angle = p_angle; //- Math::Pi / 2;
-	reflectCount = 3;
-	damage = 10;
+	reflectCount = 4;
+	damage = 80;
 }
 
 void BulletSnipe::move() {
-	static constexpr float speed = 10;
+	static constexpr float speed = 20;
 
 	Body.x += speed * cos(angle);
 	Body.y += speed * sin(angle);

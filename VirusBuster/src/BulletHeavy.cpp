@@ -3,8 +3,8 @@
 BulletHeavy::BulletHeavy(RectF body, double p_angle) {
 	Body = body;
 	angle = p_angle;
-	reflectCount = 3;
-	damage = 1;
+	reflectCount = 1;
+	damage = 5;
 
 	speed_rate = 0.75;
 }
