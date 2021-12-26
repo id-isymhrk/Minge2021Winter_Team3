@@ -12,5 +12,6 @@ void EnemyA::move() {
 	Body.y += speed;
 }
 void EnemyA::draw() {
-	Body.draw(Palette::Red);
+	static const Texture texture(U"image/Enemy1.png");
+	texture.resized(Body.size).draw(Body.pos);
 }

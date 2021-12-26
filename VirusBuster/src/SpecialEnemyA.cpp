@@ -14,7 +14,8 @@ void SpecialEnemyA::move() {
 }
 
 void SpecialEnemyA::draw() {
-    Body.draw(Palette::Red);
+    static const Texture texture(U"image/Enemy5.png");
+    texture.resized(Body.size).draw(Body.pos);
 }
 
 void SpecialEnemyA::damaged(int atk) {
