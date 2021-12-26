@@ -145,6 +145,9 @@
     <Filter Include="Source Files\Bullets">
       <UniqueIdentifier>{0e031b0d-dd92-4b05-ae5f-85e44f83c596}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Phase">
+      <UniqueIdentifier>{52aa6d11-5b26-43dc-808a-55310d4c15df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -192,9 +195,6 @@
     <ClCompile Include="src\BulletReflect.cpp">
       <Filter>Source Files\Bullets</Filter>
     </ClCompile>
-    <ClCompile Include="src\PhaseTemplate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\SpecialEnemyA.cpp">
       <Filter>Source Files\Enemies</Filter>
     </ClCompile>
@@ -206,6 +206,18 @@
     </ClCompile>
     <ClCompile Include="src\StrongEnemyA.cpp">
       <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phase1.cpp">
+      <Filter>Source Files\Phase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhaseTemplate.cpp">
+      <Filter>Source Files\Phase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phase2.cpp">
+      <Filter>Source Files\Phase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Phase3.cpp">
+      <Filter>Source Files\Phase</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

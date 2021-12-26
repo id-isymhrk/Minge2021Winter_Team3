@@ -3,8 +3,9 @@
 
 Stage::Stage(const InitData& init)
 	:IScene(init) {
-	phases << (PhaseTemplate*)new PhaseTemplate();
-	phases << (PhaseTemplate*)new PhaseTemplate();
+	phases << (PhaseTemplate*)new Phase1();
+	phases << (PhaseTemplate*)new Phase2();
+	phases<< (PhaseTemplate*)new Phase3();
 	HP = StageMaxHP;
 }
 

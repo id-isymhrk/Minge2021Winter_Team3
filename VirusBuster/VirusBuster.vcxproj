@@ -124,6 +124,9 @@
     <ClCompile Include="src\EnemyTemplate.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Over.cpp" />
+    <ClCompile Include="src\Phase1.cpp" />
+    <ClCompile Include="src\Phase2.cpp" />
+    <ClCompile Include="src\Phase3.cpp" />
     <ClCompile Include="src\PhaseTemplate.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\SpecialEnemyB.cpp" />
