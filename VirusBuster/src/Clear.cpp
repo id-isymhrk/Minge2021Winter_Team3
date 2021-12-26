@@ -7,7 +7,7 @@ Clear::Clear(const InitData& init):IScene(init) {
 
 void Clear::update() {
 
-	//SaveFile(getData());
+	SaveFile(getData());
 	if (KeyEnter.pressed()) {
 		changeScene(State::Title);
 	}

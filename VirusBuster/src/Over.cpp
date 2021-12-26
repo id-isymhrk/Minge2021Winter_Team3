@@ -7,7 +7,7 @@ Over::Over(const InitData& init)
 
 void Over::update() {
 
-	//SaveFile(getData());
+	SaveFile(getData());
 
 	//デバッグ用
 	debug();
