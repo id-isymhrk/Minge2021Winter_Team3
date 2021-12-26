@@ -8,6 +8,8 @@ protected:
 	bool removeFlag = false;
 
 public:
+	double speed;
+	double speedOrigin;
 	RectF Body;
 	int money = 10;
 	int offensivePower = 10;
@@ -31,6 +33,8 @@ protected:
 	double angle;
 	int reflectCount=100000;
 	int damage;
+
+	double speed_rate = 1.0;
 
 public:
 

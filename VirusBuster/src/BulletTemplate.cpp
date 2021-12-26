@@ -33,6 +33,12 @@ bool BulletTemplate::remove(Array<EnemyTemplate*> enemies) {
 	for (EnemyTemplate* enemy : enemies) {
 		if (Body.intersects(enemy->Body)) {
 			enemy->damaged(damage);
+			if (enemy->speed > (enemy->speedOrigin / 5)) {
+				enemy->speed *= speed_rate;
+			}
+			else {
+				enemy->speed = enemy->speedOrigin / 5;
+			}
 
 			is_removed=true;
 		}
