@@ -9,7 +9,6 @@ EnemyA::EnemyA(RectF body) {
 }
 
 void EnemyA::move() {
-	//static double speed = 2;
 	Body.y += speed;
 }
 void EnemyA::draw() {
