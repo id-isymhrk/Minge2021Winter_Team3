@@ -43,7 +43,6 @@ void Stage::update() {
 	if (phases[0]->isNextPhase(enemies)) {
 		Print << U"NextPhase";
 		phases.pop_front();
-		getData().PhaseN++;
 		if (phases.isEmpty()) {
 			if (getData().NewScore > getData().HighScore) {
 				getData().HighScore = getData().NewScore;
