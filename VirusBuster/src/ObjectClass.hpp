@@ -47,6 +47,14 @@ public:
 	bool remove(Array<EnemyTemplate*>);
 };
 
+class Boss :public EnemyTemplate {
+private:
+public:
+	Boss();
+	void update() override;
+	void draw();
+};
+
 class EnemyA : public EnemyTemplate {
 public:
 	EnemyA(RectF body);
