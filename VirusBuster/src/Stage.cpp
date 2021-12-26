@@ -5,7 +5,7 @@ Stage::Stage(const InitData& init)
 	:IScene(init) {
 	phases << (PhaseTemplate*)new PhaseTemplate();
 	phases << (PhaseTemplate*)new PhaseTemplate();
-	HP = 100;
+	HP = StageMaxHP;
 }
 
 void Stage::update() {
@@ -59,7 +59,7 @@ void Stage::draw() const {
 	const static Texture texture(U"image/backgroundKekkan_game.png");
 	texture.resized(Scene::Size()).draw(0, 0);
 
-	RectF(0.0, Scene::Height() - 10.0, Scene::Width() * HP / 100, 10.0).draw(Color(173, 255, 47, 192));
+	RectF(0.0, Scene::Height() - 10.0, Scene::Width() * HP / StageMaxHP, 10.0).draw(Color(173, 255, 47, 192));
 
 	for (BulletTemplate* b : bullets) {
 		b->draw();
