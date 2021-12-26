@@ -9,7 +9,6 @@ EnemyC::EnemyC(RectF body) {
 }
 
 void EnemyC::move() {
-    //static double speed = 2;
 
     Body.y += speed;
     Body.x = Scene::Width() * Periodic::Sawtooth0_1(3s);
