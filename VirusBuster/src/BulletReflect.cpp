@@ -4,11 +4,11 @@ BulletReflect::BulletReflect(RectF body, double p_angle) {
 	Body = body;
 	angle = p_angle; //- Math::Pi / 2;
 	reflectCount = 10;
-	damage = 1;
+	damage = 2;
 }
 
 void BulletReflect::move() {
-	constexpr float speed = 4;
+	constexpr float speed = 5;
 
 	Body.x += speed * cos(angle);
 	Body.y += speed * sin(angle);
