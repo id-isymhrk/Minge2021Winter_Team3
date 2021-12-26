@@ -8,7 +8,6 @@ SpecialEnemyA::SpecialEnemyA(RectF body) {
 }
 
 void SpecialEnemyA::move() {
-    //static double speed = 0.2;
 
     Body.y += speed;
    
