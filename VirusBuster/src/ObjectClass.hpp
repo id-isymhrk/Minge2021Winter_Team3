@@ -76,6 +76,15 @@ public:
 	void damaged(int B_damage)override;
 };
 
+class StrongEnemyA : public EnemyTemplate {
+private:
+	int originX=Scene::Width();
+public:
+	StrongEnemyA(RectF body);
+	void move()override;
+	void draw()override;
+};
+
 class bullet_norm :public BulletTemplate {
 private:
 public:
