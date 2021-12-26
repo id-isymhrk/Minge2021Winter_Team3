@@ -47,7 +47,7 @@ void Stage::update() {
 				getData().HighScore = getData().NewScore;
 			}
 			SaveFile(getData());
-			changeScene(State::Title);
+			changeScene(State::Clear);
 		}
 	}
 	
