@@ -1,12 +1,15 @@
-#include"ObjectClass.hpp"
+﻿#include"ObjectClass.hpp"
 
 EnemyC::EnemyC(RectF body) {
     HP = 30;
     Body = body;
+
+    speed = 2;
+    speedOrigin = speed;
 }
 
 void EnemyC::move() {
-    static double speed = 2;
+    //static double speed = 2;
 
     Body.y += speed;
     Body.x = Scene::Width() * Periodic::Sawtooth0_1(3s);
