@@ -186,9 +186,6 @@
     <ClCompile Include="src\EnemyB.cpp">
       <Filter>Source Files\Enemies</Filter>
     </ClCompile>
-    <ClCompile Include="src\EnemyC.cpp">
-      <Filter>Source Files\Enemies</Filter>
-    </ClCompile>
     <ClCompile Include="src\BulletSnipe.cpp">
       <Filter>Source Files\Bullets</Filter>
     </ClCompile>
@@ -203,6 +200,9 @@
     </ClCompile>
     <ClCompile Include="src\BulletHeavy.cpp">
       <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SpecialEnemyB.cpp">
+      <Filter>Source Files\Enemies</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
