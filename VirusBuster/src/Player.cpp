@@ -92,7 +92,7 @@ BulletTemplate* Player::Shoot() {
 		return (BulletTemplate*)new BulletReflect(RectF(Arg::center(position), 5), angle);
 	case 4:
 		shot_cool = 0.8;
-		return (BulletTemplate*)new BulletHeavy(RectF(Arg::center(position), 5), angle);
+		return (BulletTemplate*)new BulletHeavy(RectF(Arg::center(position), 20), angle);
 	default:
 		return (BulletTemplate*)new bullet_norm(RectF(Arg::center(position), 5), angle);
 	}
