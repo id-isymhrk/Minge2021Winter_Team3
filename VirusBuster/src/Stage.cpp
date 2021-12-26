@@ -60,6 +60,9 @@ void Stage::draw() const {
 
 	RectF(0.0, Scene::Height() - 10.0, Scene::Width() * HP / StageMaxHP, 10.0).draw(Color(173, 255, 47, 192));
 
+
+	player.draw();
+
 	for (BulletTemplate* b : bullets) {
 		b->draw();
 	}
@@ -67,8 +70,6 @@ void Stage::draw() const {
 	for (EnemyTemplate* e : enemies) {
 		e->draw();
 	}
-
-	player.draw();
 }
 
 void Stage::debug() {
