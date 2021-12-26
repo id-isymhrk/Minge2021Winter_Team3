@@ -60,9 +60,9 @@ public:
     void draw();
 };
 
-class EnemyC : public EnemyTemplate {
+class SpecialEnemyB : public EnemyTemplate {
 public:
-    EnemyC(RectF body);
+    SpecialEnemyB(RectF body);
     void move()override;
     void draw()override;
     void damaged(int B_damage)override;

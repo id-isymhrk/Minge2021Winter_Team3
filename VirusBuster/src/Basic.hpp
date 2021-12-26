@@ -1,7 +1,7 @@
 ﻿#pragma once
 # include <Siv3D.hpp> // OpenSiv3D v0.6.3
 
-const int StageMaxHP = 100;
+const int StageMaxHP = 210;
 
 enum class State {
 	Title,
