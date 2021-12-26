@@ -7,7 +7,7 @@ StrongEnemyA::StrongEnemyA(RectF body) {
 
 	speed = 1.5;
 
-	offensivePower = StageMaxHP/10;
+	offensivePower = StageMaxHP/3;
 }
 
 void StrongEnemyA::move() {
