@@ -156,6 +156,13 @@ public:
 	void addEnemies(Array<EnemyTemplate*>&);
 };
 
+class Phase4 :public PhaseTemplate {
+public:
+	Phase4();
+	~Phase4();
+	void addEnemies(Array<EnemyTemplate*>&);
+};
+
 class Player
 {
 private:

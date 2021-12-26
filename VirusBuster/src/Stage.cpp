@@ -6,6 +6,7 @@ Stage::Stage(const InitData& init)
 	phases << (PhaseTemplate*)new Phase1();
 	phases << (PhaseTemplate*)new Phase2();
 	phases<< (PhaseTemplate*)new Phase3();
+	phases << (PhaseTemplate*)new Phase4();
 	HP = StageMaxHP;
 }
 
@@ -28,7 +29,6 @@ void Stage::update() {
 				if (getData().NewScore > getData().HighScore) {
 					getData().HighScore = getData().NewScore;
 				}
-				getData().PhaseN = 1;
 				changeScene(State::Over);
 			}
 		}
@@ -47,7 +47,6 @@ void Stage::update() {
 			if (getData().NewScore > getData().HighScore) {
 				getData().HighScore = getData().NewScore;
 			}
-			getData().PhaseN = 1;
 			changeScene(State::Clear);
 		}
 	}
