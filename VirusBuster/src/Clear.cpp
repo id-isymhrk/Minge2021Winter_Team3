@@ -14,10 +14,14 @@ void Clear::update() {
 }
 
 void Clear::draw() const {
+	static const int newScore = getData().NewScore;
+	static const int highScore=getData().HighScore;
 	const static FontAsset titleFont(U"Title");
 	const static FontAsset textFont(U"Instruction");
 	titleFont(U"Game Clear").drawAt(Scene::Width() / 2, Scene::Height() / 2 - 70, Palette::Yellow);
 	textFont(U"Press the Enter key to return to Title").drawAt(Scene::Width() / 2, Scene::Height() / 2, Palette::Black);
+	textFont(U"Score : {}"_fmt(newScore)).drawAt(Scene::Width() / 2, Scene::Height() / 2 + 100, Palette::Black);
+	textFont(U"High Score : {}"_fmt(highScore)).drawAt(Scene::Width() / 2, Scene::Height() / 2 + 160, Palette::Black);
 }
 
 void Clear::debug() {
