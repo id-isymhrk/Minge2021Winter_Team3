@@ -8,7 +8,6 @@ EnemyB::EnemyB(RectF body) {
 }
 
 void EnemyB::move() {
-	//static double speed = 2;
     
     Body.y += speed;
     Body.x = Scene::Width() * Periodic::Triangle0_1(4s);
