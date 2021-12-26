@@ -1,4 +1,4 @@
-#include"SceneClass.hpp"
+﻿#include"SceneClass.hpp"
 
 Over::Over(const InitData& init)
 	:IScene(init) {

@@ -4,7 +4,7 @@ bullet_norm::bullet_norm(RectF body, double p_angle) {
 	Body = body;
 	angle = p_angle; //- Math::Pi / 2;
 	reflectCount = 3;
-	damage = 3;
+	damage = 20;
 }
 
 void bullet_norm::move() {

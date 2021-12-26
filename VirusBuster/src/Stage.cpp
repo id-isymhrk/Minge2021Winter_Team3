@@ -24,8 +24,15 @@ void Stage::update() {
 		if (e->arrived()) {
 			HP -= e->offensivePower;
 			if (HP <= 0) {
+				if (getData().NewScore > getData().HighScore) {
+					getData().HighScore = getData().NewScore;
+				}
+				SaveFile(getData());
 				changeScene(State::Over);
 			}
+		}
+		if (e->death()) {
+			getData().NewScore += e->money;
 		}
 	}
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
@@ -36,6 +43,10 @@ void Stage::update() {
 		Print << U"NextPhase";
 		phases.pop_front();
 		if (phases.isEmpty()) {
+			if (getData().NewScore > getData().HighScore) {
+				getData().HighScore = getData().NewScore;
+			}
+			SaveFile(getData());
 			changeScene(State::Clear);
 		}
 	}
@@ -45,6 +56,8 @@ void Stage::update() {
 }
 
 void Stage::draw() const {
+	const static Texture texture(U"image/backgroundKekkan_game.png");
+	texture.resized(Scene::Size()).draw(0, 0);
 
 	RectF(0.0, Scene::Height() - 10.0, Scene::Width() * HP / 100, 10.0).draw(Color(173, 255, 47, 192));
 
@@ -62,9 +75,13 @@ void Stage::draw() const {
 void Stage::debug() {
 	ClearPrint();
 	Print << U"ここはゲーム本編";
-	Print << Scene::Time();
+	Print << U"HighScore:{}"_fmt(getData().HighScore);
+	Print << U"NewScore:{}"_fmt(getData().NewScore);
+	//Print << Scene::Time();
 	Print << HP;
 	player.debug();
+	
+
 }
 
 bool is_inside(RectF body, double x1, double y1, double x2, double y2) {

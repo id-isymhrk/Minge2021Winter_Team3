@@ -1,8 +1,10 @@
-#include"SceneClass.hpp"
+﻿#include"SceneClass.hpp"
 
 Title::Title(const InitData& init)
 	:IScene(init)
 {
+    ReadFile(getData());
+    getData().NewScore = 0;
 	// テキストを画面にデバッグ出力 | Print a text
 	//Print << U"Press the EnterKey";
 }
@@ -30,7 +32,7 @@ void Title::update() {
         }
     }
 	//デバッグ用
-	//debug();
+	debug();
 }
 
 void Title::draw() const {
@@ -61,6 +63,7 @@ void Title::draw() const {
 }
 
 void Title::debug() {
+    ClearPrint();
     //// テキストを画面にデバッグ出力 | Print a text
     //Print << U"Push [A] key";
     // もし [A] キーが押されたら | When [A] key is down
@@ -68,7 +71,7 @@ void Title::debug() {
         // 選択肢からランダムに選ばれたメッセージをデバッグ表示
         Print << Sample({ U"Hello!", U"こんにちは", U"你好", U"안녕하세요?" });
     }
-    //Sキーで設定画面に移動します
-    if (KeyS.down())
-        changeScene(State::Setting);
+
+    Print << U"HighScore:{}"_fmt(getData().HighScore);
+    Print << U"NewScore:{}"_fmt(getData().NewScore);
 }
