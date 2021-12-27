@@ -25,8 +25,10 @@ void Player::update(Array<BulletTemplate*>& bullets) {
 }
 
 void Player::draw() const{
-	Body.draw(Palette::White);
+	const static Texture playerImage(U"image/Player.png");
+	
 	Line(position.x, position.y, 400 * cos(angle) + position.x, 400 * sin(angle) + position.y).drawArrow(1, Vec2(10, 20), Palette::Red);
+	playerImage.resized(Body.size+Size(20,20)).rotated(angle-Math::Pi/2).drawAt(Body.center());
 }
 
 void Player::rotate() {
