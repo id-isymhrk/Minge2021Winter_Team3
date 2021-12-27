@@ -1,7 +1,7 @@
 ﻿#include"ObjectClass.hpp"
 
 FlagEnemy::FlagEnemy(RectF body) :StrongEnemyA(body){
-
+	speed = 1.8;
 }
 
 void FlagEnemy::update(int* BossPhase) {

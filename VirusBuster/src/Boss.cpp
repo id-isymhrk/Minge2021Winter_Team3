@@ -19,5 +19,7 @@ void Boss::update(int* BossPhase) {
 }
 
 void Boss::draw() {
-	Body.rounded(100).draw(Palette::Black);
+	static const Texture texture(U"image/boss.png");
+	Body.rounded(100).draw(Color(Palette::Black,100));
+	texture.resized(Body.size).draw(Body.pos);
 }
