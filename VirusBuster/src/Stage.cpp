@@ -40,7 +40,6 @@ void Stage::update() {
 	//Phase処理
 	phases[0]->addEnemies(enemies);
 	if (phases[0]->isNextPhase(enemies)) {
-		Print << U"NextPhase";
 		phases.pop_front();
 		if (phases.isEmpty()) {
 			if (getData().NewScore > getData().HighScore) {
@@ -51,7 +50,7 @@ void Stage::update() {
 	}
 	
 	//デバッグ用
-	debug();
+	////debug( );
 }
 
 void Stage::draw() const {
@@ -79,7 +78,7 @@ void Stage::debug() {
 	Print << U"NewScore:{}"_fmt(getData().NewScore);
 	//Print << Scene::Time();
 	Print << HP;
-	player.debug();
+	//player.debug( );
 	
 
 }
