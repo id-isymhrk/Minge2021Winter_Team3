@@ -85,12 +85,19 @@ public:
 };
 
 class StrongEnemyA : public EnemyTemplate {
-private:
+protected:
 	int originX=Scene::Width();
 public:
 	StrongEnemyA(RectF body);
 	void move()override;
 	void draw()override;
+};
+
+class FlagEnemy : public StrongEnemyA {
+private:
+public:
+	FlagEnemy(RectF body);
+	void update() override;
 };
 
 class bullet_norm :public BulletTemplate {

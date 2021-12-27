@@ -1,7 +1,7 @@
 ﻿#include"ObjectClass.hpp"
 
 Boss::Boss() {
-	Body = RectF(Scene::Width() / 2, 50, 100);
+	Body = RectF(Arg::center(Scene::Width() / 2, 100), 200);
 	HP = 1000;
 }
 
@@ -12,8 +12,12 @@ void Boss::update() {
 	else{
 		HP = 1000;
 	}
+
+	if (BossPhase >= MaxBossPhase) {
+		removeFlag = true;
+	}
 }
 
 void Boss::draw() {
-	Body.rounded(25).draw(Palette::Black);
+	Body.rounded(75).draw(Palette::Black);
 }
