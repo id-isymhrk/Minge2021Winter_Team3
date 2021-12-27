@@ -113,6 +113,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Boss.cpp" />
     <ClCompile Include="src\BulletHeavy.cpp" />
     <ClCompile Include="src\BulletReflect.cpp" />
     <ClCompile Include="src\BulletSnipe.cpp" />
@@ -127,6 +128,7 @@
     <ClCompile Include="src\Phase1.cpp" />
     <ClCompile Include="src\Phase2.cpp" />
     <ClCompile Include="src\Phase3.cpp" />
+    <ClCompile Include="src\Phase4.cpp" />
     <ClCompile Include="src\PhaseTemplate.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\SpecialEnemyB.cpp" />
