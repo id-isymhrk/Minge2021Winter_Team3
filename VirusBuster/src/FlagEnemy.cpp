@@ -10,3 +10,9 @@ void FlagEnemy::update(int* BossPhase) {
 	}
 	move();
 }
+
+void FlagEnemy::draw() {
+	static const Texture texture(U"image/Enemy4.png");
+	texture.resized(Body.size).draw(Body.pos);
+	Body.rounded(50).draw(Color(0, 0, 0, 80));
+}
