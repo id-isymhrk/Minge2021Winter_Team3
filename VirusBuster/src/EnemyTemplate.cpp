@@ -6,7 +6,7 @@ EnemyTemplate::EnemyTemplate() {
 EnemyTemplate::~EnemyTemplate() {
 
 }
-void EnemyTemplate::update() {
+void EnemyTemplate::update(int* n) {
 	move();
 }
 void EnemyTemplate::draw() {
