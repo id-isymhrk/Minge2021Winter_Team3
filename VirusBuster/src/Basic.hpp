@@ -5,8 +5,6 @@ const int StageMaxHP = 210;
 const int BossStage = 4;
 const int MaxBossPhase = 3;
 
-static int BossPhase = 1;
-
 enum class State {
 	Title,
 	Setting,
