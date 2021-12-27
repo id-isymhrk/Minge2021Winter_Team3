@@ -18,7 +18,7 @@ void Title::update() {
         state+=1;
     }
     
-    if(KeyEnter.down()){
+    if(KeySpace.down()){
         switch(state){
             case 0:
                 changeScene(State::Stage);
@@ -32,7 +32,7 @@ void Title::update() {
         }
     }
 	//デバッグ用
-	debug();
+	//debug( );
 }
 
 void Title::draw() const {
@@ -43,7 +43,7 @@ void Title::draw() const {
     const static FontAsset selectFont(U"Select");
     texture.resized(Scene::Size()).draw(0, 0);
     
-    textFont2(U"Press the EnterKey").drawAt(60, 20, Palette::Black);
+    textFont2(U"Press the SpaceKey").drawAt(60, 20, Palette::Black);
     
     titleFont(U"VirusBuster").drawAt(200, 100, Palette::Black);
     titleFont(U"VirusBuster").drawAt(202, 102, Palette::Blue);
