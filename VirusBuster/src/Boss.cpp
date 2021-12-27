@@ -5,7 +5,7 @@ Boss::Boss() {
 	HP = 1000;
 }
 
-void Boss::update() {
+void Boss::update(int* BossPhase) {
 	if (removeFlag) {
 		HP = 0;
 	}
@@ -13,11 +13,11 @@ void Boss::update() {
 		HP = 1000;
 	}
 
-	if (BossPhase >= MaxBossPhase) {
+	if (*BossPhase >= MaxBossPhase) {
 		removeFlag = true;
 	}
 }
 
 void Boss::draw() {
-	Body.rounded(75).draw(Palette::Black);
+	Body.rounded(100).draw(Palette::Black);
 }
