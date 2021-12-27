@@ -4,9 +4,9 @@ FlagEnemy::FlagEnemy(RectF body) :StrongEnemyA(body){
 
 }
 
-void FlagEnemy::update() {
+void FlagEnemy::update(int* BossPhase) {
 	if (removeFlag) {
-		BossPhase++;
+		*(BossPhase) += 1;
 	}
 	move();
 }

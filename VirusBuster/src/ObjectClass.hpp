@@ -6,7 +6,6 @@ class EnemyTemplate
 protected:
 	int HP;
 	bool removeFlag = false;
-
 public:
 	double speed;
 	double speedOrigin;
@@ -17,7 +16,7 @@ public:
 	EnemyTemplate();
 	~EnemyTemplate();
 
-	virtual void update();
+	virtual void update(int* n = 0);
 	virtual void draw();
 	virtual void move();
 	virtual void damaged(int B_damage);
@@ -50,8 +49,9 @@ public:
 class Boss :public EnemyTemplate {
 private:
 public:
+
 	Boss();
-	void update() override;
+	void update(int* n) override;
 	void draw();
 };
 
@@ -97,7 +97,8 @@ class FlagEnemy : public StrongEnemyA {
 private:
 public:
 	FlagEnemy(RectF body);
-	void update() override;
+	void update(int* n)override;
+	void draw()override;
 };
 
 class bullet_norm :public BulletTemplate {
@@ -135,11 +136,16 @@ public:
 class PhaseTemplate {
 protected:
 	Array<EnemyTemplate*> enemyWaitingList;
+	int totalRemove = 0;
+	int BossPhase = 0;
 public:
 	PhaseTemplate();
 	~PhaseTemplate();
 	virtual void addEnemies(Array<EnemyTemplate*>&);
 	virtual bool isNextPhase(Array<EnemyTemplate*>);
+
+	void checkRemoveNum(int);
+	void checkBossPhase(int);
 };
 
 class Phase1 :public PhaseTemplate {
@@ -164,6 +170,8 @@ public:
 };
 
 class Phase4 :public PhaseTemplate {
+private:
+	int firstRemoveN;
 public:
 	Phase4();
 	~Phase4();

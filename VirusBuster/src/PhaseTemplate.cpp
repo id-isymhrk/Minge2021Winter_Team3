@@ -26,3 +26,11 @@ bool PhaseTemplate::isNextPhase(Array<EnemyTemplate*> enemies) {
 	}
 	return false;
 }
+
+void PhaseTemplate::checkRemoveNum(int n) {
+	totalRemove = n;
+}
+
+void PhaseTemplate::checkBossPhase(int n) {
+	BossPhase = n;
+}

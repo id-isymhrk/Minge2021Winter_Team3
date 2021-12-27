@@ -123,6 +123,7 @@
     <ClCompile Include="src\EnemyA.cpp" />
     <ClCompile Include="src\EnemyB.cpp" />
     <ClCompile Include="src\EnemyTemplate.cpp" />
+    <ClCompile Include="src\FlagEnemy.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Over.cpp" />
     <ClCompile Include="src\Phase1.cpp" />
