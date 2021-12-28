@@ -48,8 +48,8 @@ public:
 
 class Boss :public EnemyTemplate {
 private:
+	bool deathFlag = false;
 public:
-
 	Boss();
 	void update(int* n) override;
 	void draw();
