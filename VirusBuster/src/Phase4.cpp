@@ -27,7 +27,7 @@ void Phase4::addEnemies(Array<EnemyTemplate*>& enemies) {
 		case 0:
 			popCool2 = Random<double>(2.0, 4.0);
 
-			switch (Random<int>(0, 4)) {
+			switch (Random<int>(0, 4) + (RandomBool(0.2) ? 1 : 0)) {
 			case 0:
 				enemies << (EnemyTemplate*)new EnemyA(RectF(Random<int>(5, Scene::Width() - 5), -70, 70, 70));
 				break;
@@ -38,7 +38,7 @@ void Phase4::addEnemies(Array<EnemyTemplate*>& enemies) {
 				enemies << (EnemyTemplate*)new SpecialEnemyB(RectF(Random<int>(100, Scene::Width() - 200), -70, 70, 70));
 				break;
 			case 4:
-				enemies << (EnemyTemplate*)new SpecialEnemyA(RectF(Random<int>(100, Scene::Width() - 100), -70, 70, 70));
+				enemies << (EnemyTemplate*)new SpecialEnemyA(RectF(Random<int>(100, Scene::Width() - 100), -70, 100, 100));
 				break;
 			case 5:
 				enemies << (EnemyTemplate*)new StrongEnemyA(RectF(Random<int>(100, Scene::Width() - 200), -70, 70, 70));
@@ -57,7 +57,7 @@ void Phase4::addEnemies(Array<EnemyTemplate*>& enemies) {
 				}
 				break;
 			case 1:
-				for (int i = 0; i < 5; i++) {
+				for (int i = 0; i < 7; i++) {
 					enemies << (EnemyTemplate*)new EnemyB(RectF(Random<int>(0, Scene::Width() - 200), -70, 70, 70));
 				}
 				break;
@@ -68,7 +68,7 @@ void Phase4::addEnemies(Array<EnemyTemplate*>& enemies) {
 				break;
 			case 4:
 				for (int i = 0; i < 4; i++) {
-					enemies << (EnemyTemplate*)new SpecialEnemyA(RectF(Random<int>(100, Scene::Width() - 200), -70, 70, 70));
+					enemies << (EnemyTemplate*)new SpecialEnemyA(RectF(Random<int>(100, Scene::Width() - 200), -70, 100, 100));
 				}
 				break;
 			default:
@@ -88,25 +88,18 @@ void Phase4::addEnemies(Array<EnemyTemplate*>& enemies) {
 				enemies << (EnemyTemplate*)new StrongEnemyA(RectF(Random<int>(100, Scene::Width() - 200), -70, 70, 70));
 			}
 			else {
-				for(int i=0; i<2; i++)
-				RandomBool(0.5) ?
-					enemies << (EnemyTemplate*)new SpecialEnemyA(RectF(Random<int>(100, Scene::Width() - 200), -70, 70, 70)) :
+				for(int i=0; i<3; i++)
 					enemies << (EnemyTemplate*)new SpecialEnemyB(RectF(Random<int>(100, Scene::Width() - 200), -70, 70, 70));
 			}
 			
 			value >= 5 ? value = 0 : value++;
 			break;
 		default:
-			/*if (totalRemove % 5 == 0 and not enemyWaitingList.isEmpty()) {
-				enemies << enemyWaitingList[0];
-				enemyWaitingList.pop_front();
-			}*/
 			break;
 		}
 
-		if (Scene::Time() - phaseTime > 30 and not enemyWaitingList.isEmpty()) {
-			phaseTime = Scene::Time();
-			popTime1 = popTime2 = Scene::Time() + 3;
+		if (Scene::Time() - phaseTime > 25 and not enemyWaitingList.isEmpty()) {
+			phaseTime = popTime1 = popTime2 = Scene::Time() + 5;
 			enemies << enemyWaitingList[0];
 			enemyWaitingList.pop_front();
 		}
