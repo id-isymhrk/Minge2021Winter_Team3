@@ -23,7 +23,8 @@ void Boss::draw() {
 	static Stopwatch stopwatch1{ StartImmediately::No }, stopwatch2{ StartImmediately::No };
 	static int alphaBoss = 255, alphaEffect = 0;
 	static int colorBossR = 255, colorBossG = 255, colorBossB = 255, colorEffectR = 255, colorEffectG = 255, colorEffectB = 255;
-	static double angle = 0;
+	static double effectAngle = 0;
+	static double effectSize = 0;
 	static bool alphaFlag = false;
 
 
@@ -35,10 +36,11 @@ void Boss::draw() {
 			stopwatch1.start();
 		}
 
-		//effect1.resized(Body.size * 1.2).draw(Body.pos.movedBy(0, -20), Color(255, 100 * Periodic::Sine0_1(1)));
-		effect2.resized(Body.size * 2).rotated(angle).drawAt(Body.center().movedBy(5, -3), Color(colorEffectR, colorEffectG, colorEffectB, alphaEffect));
+		effect1.resized(Body.size * effectSize).drawAt(Body.center().movedBy(12, 2), Color(255, 100));
+		//effect1.resized(Body.size).drawAt(Body.center().movedBy(12, 2), Color(255, 100));
+		effect2.resized(Body.size * 2).rotated(effectAngle).drawAt(Body.center().movedBy(5, -3), Color(colorEffectR, colorEffectG, colorEffectB, alphaEffect));
 		//effect2.resized(Body.size * 2).drawAt(Body.center().movedBy(10-5, -8+5), Color(255, 155), Color(255, 155), Color(255, 155), Color(255, 155));
-		angle = stopwatch1.sF() + Math::Pi / 5;
+		effectAngle = stopwatch1.sF() + Math::Pi / 5;
 
 		if (alphaEffect >= 255) {
 			if (not alphaFlag) {
@@ -50,14 +52,15 @@ void Boss::draw() {
 				stopwatch1.pause();
 			}
 			else {
-				alphaBoss = 255 - (stopwatch2.sF() * 70);
+				alphaBoss = 255 - ((stopwatch2.sF() - 2) * 80);
 				colorBossR = Random(0, 255);
 				colorBossG = Random(0, 255);
 				colorBossB = Random(0, 255);
 				colorEffectR = Random(0, 255);
 				colorEffectG = Random(0, 255);
 				colorEffectB = Random(0, 255);
-				angle += Random(0, 255);
+				effectAngle += Random(0, 255);
+				effectSize = (stopwatch2.sF() - 2);
 				if (alphaBoss < 0) {
 					removeFlag = true;
 				}
