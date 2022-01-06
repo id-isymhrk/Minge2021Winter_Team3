@@ -6,7 +6,10 @@ Stage::Stage(const InitData& init)
 	phases << (PhaseTemplate*)new Phase1();
 	phases << (PhaseTemplate*)new Phase2();
 	phases<< (PhaseTemplate*)new Phase3();
+	phases << (PhaseTemplate*)new Phase4();
 	HP = StageMaxHP;
+	totalRemove = 0;
+	BossPhase = 0;
 }
 
 void Stage::update() {
@@ -21,8 +24,8 @@ void Stage::update() {
 
 	//update enemy
 	for (EnemyTemplate* e : enemies) {
-		e->update();
 		if (e->arrived()) {
+			totalRemove++;
 			HP -= e->offensivePower;
 			if (HP <= 0) {
 				if (getData().NewScore > getData().HighScore) {
@@ -32,12 +35,17 @@ void Stage::update() {
 			}
 		}
 		if (e->death()) {
+			totalRemove++;
 			getData().NewScore += e->money;
 		}
+
+		e->update(&BossPhase);
 	}
 	enemies.remove_if([](EnemyTemplate* e) {return e->remove(); });
 
 	//Phase処理
+	phases[0]->checkRemoveNum(totalRemove);
+	phases[0]->checkBossPhase(BossPhase);
 	phases[0]->addEnemies(enemies);
 	if (phases[0]->isNextPhase(enemies)) {
 		phases.pop_front();
@@ -76,6 +84,8 @@ void Stage::debug() {
 	Print << U"ここはゲーム本編";
 	Print << U"HighScore:{}"_fmt(getData().HighScore);
 	Print << U"NewScore:{}"_fmt(getData().NewScore);
+	Print << U"BossPhase:{}"_fmt(BossPhase);
+	Print << U"TotalRemove:{}"_fmt(totalRemove);
 	//Print << Scene::Time();
 	Print << HP;
 	//player.debug( );

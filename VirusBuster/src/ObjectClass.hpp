@@ -6,7 +6,6 @@ class EnemyTemplate
 protected:
 	int HP;
 	bool removeFlag = false;
-
 public:
 	double speed;
 	double speedOrigin;
@@ -17,7 +16,7 @@ public:
 	EnemyTemplate();
 	~EnemyTemplate();
 
-	virtual void update();
+	virtual void update(int* n = 0);
 	virtual void draw();
 	virtual void move();
 	virtual void damaged(int B_damage);
@@ -45,6 +44,15 @@ public:
 	virtual void draw();
 	virtual void move();
 	bool remove(Array<EnemyTemplate*>);
+};
+
+class Boss :public EnemyTemplate {
+private:
+	bool deathFlag = false;
+public:
+	Boss();
+	void update(int* n) override;
+	void draw();
 };
 
 class EnemyA : public EnemyTemplate {
@@ -77,11 +85,19 @@ public:
 };
 
 class StrongEnemyA : public EnemyTemplate {
-private:
+protected:
 	int originX=Scene::Width();
 public:
 	StrongEnemyA(RectF body);
 	void move()override;
+	void draw()override;
+};
+
+class FlagEnemy : public StrongEnemyA {
+private:
+public:
+	FlagEnemy(RectF body);
+	void update(int* n)override;
 	void draw()override;
 };
 
@@ -120,11 +136,16 @@ public:
 class PhaseTemplate {
 protected:
 	Array<EnemyTemplate*> enemyWaitingList;
+	int totalRemove = 0;
+	int BossPhase = 0;
 public:
 	PhaseTemplate();
 	~PhaseTemplate();
 	virtual void addEnemies(Array<EnemyTemplate*>&);
 	virtual bool isNextPhase(Array<EnemyTemplate*>);
+
+	void checkRemoveNum(int);
+	void checkBossPhase(int);
 };
 
 class Phase1 :public PhaseTemplate {
@@ -145,6 +166,15 @@ class Phase3 :public PhaseTemplate {
 public:
 	Phase3();
 	~Phase3();
+	void addEnemies(Array<EnemyTemplate*>&);
+};
+
+class Phase4 :public PhaseTemplate {
+private:
+	int firstRemoveN;
+public:
+	Phase4();
+	~Phase4();
 	void addEnemies(Array<EnemyTemplate*>&);
 };
 

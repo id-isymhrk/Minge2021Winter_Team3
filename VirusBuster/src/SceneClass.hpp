@@ -32,6 +32,8 @@ private:
 	Array<EnemyTemplate*> enemies;
 	Array<BulletTemplate*> bullets;
 	int HP;
+	int totalRemove;
+	int BossPhase;
 public:
 	Stage(const InitData& init);
 	void update() override;
