@@ -1,7 +1,7 @@
 ﻿#pragma once
 # include <Siv3D.hpp> // OpenSiv3D v0.6.3
 
-const int StageMaxHP = 210;
+const int StageMaxHP = 420;
 const int BossStage = 4;
 const int MaxBossPhase = 3;
 

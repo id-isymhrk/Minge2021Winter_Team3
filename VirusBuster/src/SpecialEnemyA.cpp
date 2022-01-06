@@ -5,6 +5,8 @@ SpecialEnemyA::SpecialEnemyA(RectF body) {
     Body = body;
     speed = 0.2;
     speedOrigin = speed;
+
+    money += 5;
 }
 
 void SpecialEnemyA::move() {

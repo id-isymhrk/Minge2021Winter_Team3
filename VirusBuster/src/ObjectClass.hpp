@@ -11,7 +11,7 @@ public:
 	double speedOrigin;
 	RectF Body;
 	int money = 10;
-	int offensivePower = 10;
+	int offensivePower = StageMaxHP / 10;
 
 	EnemyTemplate();
 	~EnemyTemplate();
