@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include"Basic.hpp"
+#include"../Basic.hpp"
 
 class EnemyTemplate
 {

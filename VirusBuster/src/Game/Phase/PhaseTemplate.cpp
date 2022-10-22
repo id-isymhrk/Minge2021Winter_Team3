@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 PhaseTemplate::PhaseTemplate() {
 	/*enemyWaitingList << (EnemyTemplate*)new EnemyA(RectF(100, 0, 70, 70));

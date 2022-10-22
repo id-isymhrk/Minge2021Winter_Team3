@@ -1,4 +1,4 @@
-﻿#include "ObjectClass.hpp"
+﻿#include "../ObjectClass.hpp"
 
 BulletTemplate::BulletTemplate() {
 

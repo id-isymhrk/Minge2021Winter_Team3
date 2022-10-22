@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 BulletReflect::BulletReflect(RectF body, double p_angle) {
 	Body = body;

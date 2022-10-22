@@ -156,77 +156,77 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Setting.cpp">
-      <Filter>Source Files\SceneClass</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Title.cpp">
-      <Filter>Source Files\SceneClass</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Clear.cpp">
-      <Filter>Source Files\SceneClass</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Over.cpp">
-      <Filter>Source Files\SceneClass</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Stage.cpp">
-      <Filter>Source Files\SceneClass</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Player.cpp">
+    <ClCompile Include="src\Game\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\EnemyA.cpp">
-      <Filter>Source Files\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EnemyTemplate.cpp">
-      <Filter>Source Files\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="src\bullet_norm.cpp">
-      <Filter>Source Files\Bullets</Filter>
-    </ClCompile>
-    <ClCompile Include="src\BulletTemplate.cpp">
-      <Filter>Source Files\Bullets</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EnemyB.cpp">
-      <Filter>Source Files\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="src\BulletSnipe.cpp">
-      <Filter>Source Files\Bullets</Filter>
-    </ClCompile>
-    <ClCompile Include="src\BulletReflect.cpp">
-      <Filter>Source Files\Bullets</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SpecialEnemyA.cpp">
-      <Filter>Source Files\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="src\BulletHeavy.cpp">
-      <Filter>Source Files\Bullets</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SpecialEnemyB.cpp">
-      <Filter>Source Files\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="src\StrongEnemyA.cpp">
-      <Filter>Source Files\Enemies</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Phase1.cpp">
+    <ClCompile Include="src\Game\Phase\Phase1.cpp">
       <Filter>Source Files\Phase</Filter>
     </ClCompile>
-    <ClCompile Include="src\PhaseTemplate.cpp">
+    <ClCompile Include="src\Game\Phase\Phase2.cpp">
       <Filter>Source Files\Phase</Filter>
     </ClCompile>
-    <ClCompile Include="src\Phase2.cpp">
+    <ClCompile Include="src\Game\Phase\Phase3.cpp">
       <Filter>Source Files\Phase</Filter>
     </ClCompile>
-    <ClCompile Include="src\Phase3.cpp">
+    <ClCompile Include="src\Game\Phase\Phase4.cpp">
       <Filter>Source Files\Phase</Filter>
     </ClCompile>
-    <ClCompile Include="src\Boss.cpp">
+    <ClCompile Include="src\Game\Phase\PhaseTemplate.cpp">
+      <Filter>Source Files\Phase</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\Boss.cpp">
       <Filter>Source Files\Enemies</Filter>
     </ClCompile>
-    <ClCompile Include="src\Phase4.cpp">
-      <Filter>Source Files\Phase</Filter>
-    </ClCompile>
-    <ClCompile Include="src\FlagEnemy.cpp">
+    <ClCompile Include="src\Game\Enemy\EnemyA.cpp">
       <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\EnemyB.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\EnemyTemplate.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\FlagEnemy.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\SpecialEnemyA.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\SpecialEnemyB.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Enemy\StrongEnemyA.cpp">
+      <Filter>Source Files\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Bullet\bullet_norm.cpp">
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Bullet\BulletHeavy.cpp">
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Bullet\BulletReflect.cpp">
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Bullet\BulletSnipe.cpp">
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Bullet\BulletTemplate.cpp">
+      <Filter>Source Files\Bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\Clear.cpp">
+      <Filter>Source Files\SceneClass</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\Over.cpp">
+      <Filter>Source Files\SceneClass</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\Setting.cpp">
+      <Filter>Source Files\SceneClass</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\Stage.cpp">
+      <Filter>Source Files\SceneClass</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\Title.cpp">
+      <Filter>Source Files\SceneClass</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -860,13 +860,13 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\SceneClass.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Basic.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ObjectClass.hpp">
+    <ClInclude Include="src\Game\ObjectClass.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\SceneClass.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

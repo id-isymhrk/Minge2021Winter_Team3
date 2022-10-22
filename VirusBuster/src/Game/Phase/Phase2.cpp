@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 Phase2::Phase2() {
 	for (int i = 0; i < 40; i++) {

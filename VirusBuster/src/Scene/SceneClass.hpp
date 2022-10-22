@@ -1,6 +1,6 @@
 ﻿#pragma once
-#include "Basic.hpp"
-#include "ObjectClass.hpp"
+#include "../Basic.hpp"
+#include "../Game/ObjectClass.hpp"
 
 class Title :public App::Scene {
 private:

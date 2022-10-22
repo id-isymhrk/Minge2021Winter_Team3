@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 FlagEnemy::FlagEnemy(RectF body) :StrongEnemyA(body){
 	speed = 1.8;

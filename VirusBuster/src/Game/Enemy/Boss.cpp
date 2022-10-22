@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 Boss::Boss() {
 	Body = RectF(Arg::center(Scene::Width() / 2, 100), 200);

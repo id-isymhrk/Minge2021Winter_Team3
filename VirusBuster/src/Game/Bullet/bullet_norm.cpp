@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 bullet_norm::bullet_norm(RectF body, double p_angle) {
 	Body = body;

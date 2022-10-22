@@ -1,5 +1,5 @@
 ﻿#include"SceneClass.hpp"
-#include"ObjectClass.hpp"
+//#include"../Game/ObjectClass.hpp"
 
 Stage::Stage(const InitData& init)
 	:IScene(init) {

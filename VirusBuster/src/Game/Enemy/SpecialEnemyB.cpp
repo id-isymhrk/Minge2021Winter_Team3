@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 SpecialEnemyB::SpecialEnemyB(RectF body) {
     HP = 30;

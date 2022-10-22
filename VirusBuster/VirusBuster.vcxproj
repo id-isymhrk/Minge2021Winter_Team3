@@ -113,31 +113,31 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Boss.cpp" />
-    <ClCompile Include="src\BulletHeavy.cpp" />
-    <ClCompile Include="src\BulletReflect.cpp" />
-    <ClCompile Include="src\BulletSnipe.cpp" />
-    <ClCompile Include="src\BulletTemplate.cpp" />
-    <ClCompile Include="src\bullet_norm.cpp" />
-    <ClCompile Include="src\Clear.cpp" />
-    <ClCompile Include="src\EnemyA.cpp" />
-    <ClCompile Include="src\EnemyB.cpp" />
-    <ClCompile Include="src\EnemyTemplate.cpp" />
-    <ClCompile Include="src\FlagEnemy.cpp" />
+    <ClCompile Include="src\Game\Bullet\BulletHeavy.cpp" />
+    <ClCompile Include="src\Game\Bullet\BulletReflect.cpp" />
+    <ClCompile Include="src\Game\Bullet\BulletSnipe.cpp" />
+    <ClCompile Include="src\Game\Bullet\BulletTemplate.cpp" />
+    <ClCompile Include="src\Game\Bullet\bullet_norm.cpp" />
+    <ClCompile Include="src\Game\Enemy\Boss.cpp" />
+    <ClCompile Include="src\Game\Enemy\EnemyA.cpp" />
+    <ClCompile Include="src\Game\Enemy\EnemyB.cpp" />
+    <ClCompile Include="src\Game\Enemy\EnemyTemplate.cpp" />
+    <ClCompile Include="src\Game\Enemy\FlagEnemy.cpp" />
+    <ClCompile Include="src\Game\Enemy\SpecialEnemyA.cpp" />
+    <ClCompile Include="src\Game\Enemy\SpecialEnemyB.cpp" />
+    <ClCompile Include="src\Game\Enemy\StrongEnemyA.cpp" />
+    <ClCompile Include="src\Game\Phase\Phase1.cpp" />
+    <ClCompile Include="src\Game\Phase\Phase2.cpp" />
+    <ClCompile Include="src\Game\Phase\Phase3.cpp" />
+    <ClCompile Include="src\Game\Phase\Phase4.cpp" />
+    <ClCompile Include="src\Game\Phase\PhaseTemplate.cpp" />
+    <ClCompile Include="src\Game\Player.cpp" />
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\Over.cpp" />
-    <ClCompile Include="src\Phase1.cpp" />
-    <ClCompile Include="src\Phase2.cpp" />
-    <ClCompile Include="src\Phase3.cpp" />
-    <ClCompile Include="src\Phase4.cpp" />
-    <ClCompile Include="src\PhaseTemplate.cpp" />
-    <ClCompile Include="src\Player.cpp" />
-    <ClCompile Include="src\SpecialEnemyB.cpp" />
-    <ClCompile Include="src\Stage.cpp" />
-    <ClCompile Include="src\SpecialEnemyA.cpp" />
-    <ClCompile Include="src\StrongEnemyA.cpp" />
-    <ClCompile Include="src\Title.cpp" />
-    <ClCompile Include="src\Setting.cpp" />
+    <ClCompile Include="src\Scene\Clear.cpp" />
+    <ClCompile Include="src\Scene\Over.cpp" />
+    <ClCompile Include="src\Scene\Setting.cpp" />
+    <ClCompile Include="src\Scene\Stage.cpp" />
+    <ClCompile Include="src\Scene\Title.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -338,8 +338,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Basic.hpp" />
-    <ClInclude Include="src\ObjectClass.hpp" />
-    <ClInclude Include="src\SceneClass.hpp" />
+    <ClInclude Include="src\Game\ObjectClass.hpp" />
+    <ClInclude Include="src\Scene\SceneClass.hpp" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>

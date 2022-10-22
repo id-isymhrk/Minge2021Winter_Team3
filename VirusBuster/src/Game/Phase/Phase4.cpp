@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 Phase4::Phase4() {
 	firstRemoveN = totalRemove;

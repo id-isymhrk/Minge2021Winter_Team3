@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 StrongEnemyA::StrongEnemyA(RectF body) {
 	HP = 80;

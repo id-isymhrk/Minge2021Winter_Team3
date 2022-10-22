@@ -1,4 +1,4 @@
-﻿#include"ObjectClass.hpp"
+﻿#include"../ObjectClass.hpp"
 
 BulletSnipe::BulletSnipe(RectF body, double p_angle) {
 	Body = body;
